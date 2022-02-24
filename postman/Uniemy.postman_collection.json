@@ -1,0 +1,3843 @@
+{
+	"info": {
+		"_postman_id": "ec8b6b48-2b34-4037-beb5-4575a8c5fa5c",
+		"name": "Uniemy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "getAllCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/categories/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"categories",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAllCategories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/categories/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"categories",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "911"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"38f-C6Pv5L1inxdHZMHlnWwnLt7h2zk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 07:31:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Estos son las categorías encontradas\",\n    \"Data\": [\n        {\n            \"idCategory\": \"f27c340e-c260-45e6-aa4d-f5129284b738\",\n            \"category\": \"Wooden\"\n        },\n        {\n            \"idCategory\": \"d8bab369-3860-4e07-8b1a-8bbfdac9a282\",\n            \"category\": \"interface\"\n        },\n        {\n            \"idCategory\": \"02cd4716-2986-406b-a85f-1cc2b2806c01\",\n            \"category\": \"transitional generation\"\n        },\n        {\n            \"idCategory\": \"ebc4785d-1006-4ced-8225-9272b40f4ca9\",\n            \"category\": \"Facilitator instruction\"\n        },\n        {\n            \"idCategory\": \"5297e691-4d9f-4830-9581-df99d0f774f8\",\n            \"category\": \"French Macedonia fuchsia\"\n        },\n        {\n            \"idCategory\": \"d72d80da-6988-4bfc-a11f-a337b28762f6\",\n            \"category\": \"Plastic redundant\"\n        },\n        {\n            \"idCategory\": \"cdd11112-e724-452e-b8d6-7a61332e394a\",\n            \"category\": \"JBOD green\"\n        },\n        {\n            \"idCategory\": \"dc02a9ef-7289-4e45-a2f8-7c40a5fa12b7\",\n            \"category\": \"tan deposit National\"\n        },\n        {\n            \"idCategory\": \"aa6c7f98-6606-4024-b6e6-7333cbc9d119\",\n            \"category\": \"copying Rustic\"\n        },\n        {\n            \"idCategory\": \"fe5b50a1-3589-4eb1-b334-702d662bc087\",\n            \"category\": \"Account GB\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "createNewCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"category\": \"Bases de Datos\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/categories/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"categories",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createNewCategory",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"category\": \"Bases de Datos\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/categories/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"categories",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "145"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"91-itC5TcU8EgVs95uIngISwPiCWa4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 07:31:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha registrado con éxito\",\n    \"data\": {\n        \"idCategory\": \"d64a56ae-6535-4c9b-b35d-6c79c9c230e9\",\n        \"category\": \"Bases de Datos\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getCategoryByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/categories/d64a56ae-6535-4c9b-b35d-6c79c9c230e9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"categories",
+								"d64a56ae-6535-4c9b-b35d-6c79c9c230e9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getCategoryByID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/categories/d64a56ae-6535-4c9b-b35d-6c79c9c230e9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"categories",
+										"d64a56ae-6535-4c9b-b35d-6c79c9c230e9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "136"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"88-i5PPjh08gOjd75oTIAWQVUdcBis\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 07:32:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Usuario encontrado\",\n    \"data\": {\n        \"idCategory\": \"d64a56ae-6535-4c9b-b35d-6c79c9c230e9\",\n        \"category\": \"Bases de Datos\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updateCategory",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"category\": \"Bases de Datos NoSQL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/categories/d64a56ae-6535-4c9b-b35d-6c79c9c230e9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"categories",
+								"d64a56ae-6535-4c9b-b35d-6c79c9c230e9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateCategory",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"category\": \"Bases de Datos NoSQL\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/categories/d64a56ae-6535-4c9b-b35d-6c79c9c230e9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"categories",
+										"d64a56ae-6535-4c9b-b35d-6c79c9c230e9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "260"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"104-Pkcu9ahwf62jN83ViTfHzeOzbP8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 07:32:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha actualizado con éxito\",\n    \"data\": {\n        \"original\": {\n            \"idCategory\": \"d64a56ae-6535-4c9b-b35d-6c79c9c230e9\",\n            \"category\": \"Bases de Datos\"\n        },\n        \"Modificado\": {\n            \"idCategory\": \"d64a56ae-6535-4c9b-b35d-6c79c9c230e9\",\n            \"category\": \"Bases de Datos NoSQL\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/categories/d64a56ae-6535-4c9b-b35d-6c79c9c230e9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"categories",
+								"d64a56ae-6535-4c9b-b35d-6c79c9c230e9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteCategory",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/categories/d64a56ae-6535-4c9b-b35d-6c79c9c230e9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"categories",
+										"d64a56ae-6535-4c9b-b35d-6c79c9c230e9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "150"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"96-QZygUHECB5CBogsKexV8gwbDpP4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 07:32:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha eliminado con éxito\",\n    \"data\": {\n        \"idCategory\": \"d64a56ae-6535-4c9b-b35d-6c79c9c230e9\",\n        \"category\": \"Bases de Datos NoSQL\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "certifications",
+			"item": [
+				{
+					"name": "getAllCertifications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/certifications/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"certifications",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAllCertifications",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/certifications/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"certifications",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1190"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4a6-fKKOeDiKZ5h6AAVRnRwoeaLltm0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 07:41:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Estos son los certificados encontrados\",\n    \"Data\": [\n        {\n            \"idCertification\": \"41977ed0-e858-4444-b3af-74b03b924c86\",\n            \"student\": \"Gloria Beier\",\n            \"course\": \"cross-platform orchestrate\"\n        },\n        {\n            \"idCertification\": \"56794313-fc3c-42f1-adfe-fc1e6c8d4a1d\",\n            \"student\": \"Geneva Rice\",\n            \"course\": \"wireless bandwidth navigate\"\n        },\n        {\n            \"idCertification\": \"51c9a1ec-799d-4ff2-b250-91f85149b4cc\",\n            \"student\": \"Bill Fadel\",\n            \"course\": \"collaboration\"\n        },\n        {\n            \"idCertification\": \"a56359cc-00df-4346-9625-574eb61eb480\",\n            \"student\": \"Abel O'Conner\",\n            \"course\": \"Plains\"\n        },\n        {\n            \"idCertification\": \"f0001a04-65e8-4bc6-8f9a-8fcb9bc76246\",\n            \"student\": \"Janet McClure Jr.\",\n            \"course\": \"Persevering Ergonomic\"\n        },\n        {\n            \"idCertification\": \"4256ce3b-ab59-4bd7-8299-02d0d55d0c75\",\n            \"student\": \"Louis Wehner Jr.\",\n            \"course\": \"Liaison\"\n        },\n        {\n            \"idCertification\": \"812faae8-7a05-43cc-aeb4-e7441a29ddfb\",\n            \"student\": \"Ted Stoltenberg\",\n            \"course\": \"initiative\"\n        },\n        {\n            \"idCertification\": \"2567d639-76d1-4e21-b12c-4968b9bef724\",\n            \"student\": \"Vicky Wiegand\",\n            \"course\": \"Factors\"\n        },\n        {\n            \"idCertification\": \"1dd3ca42-fdfc-4bb7-ac01-753d8a935fa5\",\n            \"student\": \"Dr. Sheila Veum\",\n            \"course\": \"Universal Soft\"\n        },\n        {\n            \"idCertification\": \"69b796f3-a107-4a68-97db-cc669b415030\",\n            \"student\": \"Michael Abbott\",\n            \"course\": \"Quality\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "createNewCertification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"student\": \"Lessli Torres\",\r\n            \"course\": \"Programación básica\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/certifications/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"certifications",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createNewCertification",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"student\": \"Lessli Torres\",\r\n            \"course\": \"Programación básica\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/certifications/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"certifications",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "177"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b1-zdCueIz5CKEEoOqlMQjSpD3apWw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 07:43:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha creado con éxito\",\n    \"data\": {\n        \"idCertification\": \"0df7b912-2dbb-4586-8477-347bfa40adcd\",\n        \"student\": \"Lessli Torres\",\n        \"course\": \"Programación básica\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getCertificationByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/certifications/0df7b912-2dbb-4586-8477-347bfa40adcd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"certifications",
+								"0df7b912-2dbb-4586-8477-347bfa40adcd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getCertificationByID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/certifications/0df7b912-2dbb-4586-8477-347bfa40adcd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"certifications",
+										"0df7b912-2dbb-4586-8477-347bfa40adcd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "176"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b0-KGhT4pMPSP3E2KCTk+tLuHRTzIM\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 07:44:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Certificado encontrado\",\n    \"data\": {\n        \"idCertification\": \"0df7b912-2dbb-4586-8477-347bfa40adcd\",\n        \"student\": \"Lessli Torres\",\n        \"course\": \"Programación básica\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updateCertification",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"student\": \"Yareli Salinas\",\r\n            \"course\": \"Programación básica en c++\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/certifications/0df7b912-2dbb-4586-8477-347bfa40adcd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"certifications",
+								"0df7b912-2dbb-4586-8477-347bfa40adcd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateCertification",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"student\": \"Yareli Salinas\",\r\n            \"course\": \"Programación básica en c++\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/certifications/0df7b912-2dbb-4586-8477-347bfa40adcd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"certifications",
+										"0df7b912-2dbb-4586-8477-347bfa40adcd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "334"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14e-29KwP0JlGYXDUncIa5nqN8aHcKg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 07:46:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha actualizado con éxito\",\n    \"data\": {\n        \"original\": {\n            \"idCertification\": \"0df7b912-2dbb-4586-8477-347bfa40adcd\",\n            \"student\": \"Lessli Torres\",\n            \"course\": \"Programación básica\"\n        },\n        \"Modificado\": {\n            \"idCertification\": \"0df7b912-2dbb-4586-8477-347bfa40adcd\",\n            \"student\": \"Yareli Salinas\",\n            \"course\": \"Programación básica en c++\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteCertification",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/certifications/0df7b912-2dbb-4586-8477-347bfa40adcd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"certifications",
+								"0df7b912-2dbb-4586-8477-347bfa40adcd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteCertification",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/certifications/0df7b912-2dbb-4586-8477-347bfa40adcd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"certifications",
+										"0df7b912-2dbb-4586-8477-347bfa40adcd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "188"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bc-ijIKKdf3ivqBw2wlxUsMg6sh+38\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 07:47:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha eliminado con éxito\",\n    \"data\": {\n        \"idCertification\": \"0df7b912-2dbb-4586-8477-347bfa40adcd\",\n        \"student\": \"Yareli Salinas\",\n        \"course\": \"Programación básica en c++\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "courses",
+			"item": [
+				{
+					"name": "getAllCourses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/courses/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"courses",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAllCourses",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/courses/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"courses",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1918"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"77e-XkkWzjjwedfV7ceWoLRNuQVpr34\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 07:48:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Estos son todos los cursos\",\n    \"Data\": [\n        {\n            \"idCourse\": \"8a8f8cf3-bf5a-4fa4-91b0-9bfb4be80477\",\n            \"title\": \"instruction (Keeling)\",\n            \"image\": \"http://placeimg.com/640/480\",\n            \"description\": \"matrix\",\n            \"price\": 23119,\n            \"school\": \"Ted Thompson\"\n        },\n        {\n            \"idCourse\": \"ff7e2fe8-66bb-40aa-8534-bdb036ecc577\",\n            \"title\": \"Auto EXE\",\n            \"image\": \"http://placeimg.com/640/480\",\n            \"description\": \"firewall Director\",\n            \"price\": 34547,\n            \"school\": \"Felicia Little\"\n        },\n        {\n            \"idCourse\": \"285d07f6-6a0c-4130-b655-a50e9a066a99\",\n            \"title\": \"Rustic\",\n            \"image\": \"http://placeimg.com/640/480\",\n            \"description\": \"olive Wooden Fork\",\n            \"price\": 21120,\n            \"school\": \"Terry Greenholt\"\n        },\n        {\n            \"idCourse\": \"86d5a1bf-d61b-40f6-ad78-4d4e03ce4c36\",\n            \"title\": \"up Producer\",\n            \"image\": \"http://placeimg.com/640/480\",\n            \"description\": \"Avon Practical\",\n            \"price\": 17353,\n            \"school\": \"Andres Barton\"\n        },\n        {\n            \"idCourse\": \"e31c10a6-f83f-42b3-9385-d444d73612f2\",\n            \"title\": \"Metal\",\n            \"image\": \"http://placeimg.com/640/480\",\n            \"description\": \"ADP driver 24/7\",\n            \"price\": 90227,\n            \"school\": \"Billy Wilkinson\"\n        },\n        {\n            \"idCourse\": \"f3b0417e-3a83-4410-ac89-e3b31ab7a173\",\n            \"title\": \"proactive\",\n            \"image\": \"http://placeimg.com/640/480\",\n            \"description\": \"copying turquoise\",\n            \"price\": 4498,\n            \"school\": \"Homer Murazik\"\n        },\n        {\n            \"idCourse\": \"7bd4088d-cb0e-46eb-bc15-403b46732151\",\n            \"title\": \"generate\",\n            \"image\": \"http://placeimg.com/640/480\",\n            \"description\": \"Architect Specialist 5th\",\n            \"price\": 89465,\n            \"school\": \"Sergio O'Conner\"\n        },\n        {\n            \"idCourse\": \"19aec339-9e6c-4887-ab01-9a11833778de\",\n            \"title\": \"knowledge engage\",\n            \"image\": \"http://placeimg.com/640/480\",\n            \"description\": \"Concrete Cotton\",\n            \"price\": 92935,\n            \"school\": \"Blanche Bailey\"\n        },\n        {\n            \"idCourse\": \"9c60a429-f327-4b22-b3de-c3003b6147e5\",\n            \"title\": \"lavender Paradigm Clothing\",\n            \"image\": \"http://placeimg.com/640/480\",\n            \"description\": \"Planner\",\n            \"price\": 64967,\n            \"school\": \"Monique Gusikowski\"\n        },\n        {\n            \"idCourse\": \"3073e6a4-a98a-4a72-b2ad-e17c32071268\",\n            \"title\": \"Account matrix\",\n            \"image\": \"http://placeimg.com/640/480\",\n            \"description\": \"Coordinator pixel\",\n            \"price\": 20361,\n            \"school\": \"Christie Feil\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "createNewCourse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"title\": \"JavaScript para principiantes\",\r\n            \"image\": \"https://soyhorizonte.com/wp-content/uploads/2020/10/Javascript-by-SoyHorizonte.jpg\",\r\n            \"description\": \"Curso para todos aquellos que quieran aprender javascript\",\r\n            \"price\": 99.99,\r\n            \"school\": \"Alejandro Taboada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/courses/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"courses",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createNewCourse",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"title\": \"JavaScript para principiantes\",\r\n            \"image\": \"https://soyhorizonte.com/wp-content/uploads/2020/10/Javascript-by-SoyHorizonte.jpg\",\r\n            \"description\": \"Curso para todos aquellos que quieran aprender javascript\",\r\n            \"price\": 99.99,\r\n            \"school\": \"Alejandro Taboada\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/courses/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"courses",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "361"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"169-9Deqf/mLykJ3PSMKW2kn85gyaMQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 07:51:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha creado con éxito\",\n    \"data\": {\n        \"idCourse\": \"e5e481ef-29b8-4685-954b-38cf16e8f758\",\n        \"title\": \"JavaScript para principiantes\",\n        \"image\": \"https://soyhorizonte.com/wp-content/uploads/2020/10/Javascript-by-SoyHorizonte.jpg\",\n        \"description\": \"Curso para todos aquellos que quieran aprender javascript\",\n        \"price\": 99.99,\n        \"school\": \"Alejandro Taboada\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getCourseByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/courses/e5e481ef-29b8-4685-954b-38cf16e8f758",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"courses",
+								"e5e481ef-29b8-4685-954b-38cf16e8f758"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getCourseByID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/courses/e5e481ef-29b8-4685-954b-38cf16e8f758",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"courses",
+										"e5e481ef-29b8-4685-954b-38cf16e8f758"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "354"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"162-as2puMCfQMK+oIRrSKQszud3Gsg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 07:55:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Curso encontrado\",\n    \"data\": {\n        \"idCourse\": \"e5e481ef-29b8-4685-954b-38cf16e8f758\",\n        \"title\": \"JavaScript para principiantes\",\n        \"image\": \"https://soyhorizonte.com/wp-content/uploads/2020/10/Javascript-by-SoyHorizonte.jpg\",\n        \"description\": \"Curso para todos aquellos que quieran aprender javascript\",\n        \"price\": 99.99,\n        \"school\": \"Alejandro Taboada\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updateCourse",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"title\": \"JavaScript básico para principiantes\",\r\n            \"image\": \"https://soyhorizonte.com/wp-content/uploads/2020/10/Javascript-by-SoyHorizonte.jpg\",\r\n            \"description\": \"Curso para todos aquellos que quieran aprender javascript desde 0\",\r\n            \"price\": 99.99,\r\n            \"school\": \"Alejandro Taboada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/courses/e5e481ef-29b8-4685-954b-38cf16e8f758",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"courses",
+								"e5e481ef-29b8-4685-954b-38cf16e8f758"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateCourse",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"title\": \"JavaScript básico para principiantes\",\r\n            \"image\": \"https://soyhorizonte.com/wp-content/uploads/2020/10/Javascript-by-SoyHorizonte.jpg\",\r\n            \"description\": \"Curso para todos aquellos que quieran aprender javascript desde 0\",\r\n            \"price\": 99.99,\r\n            \"school\": \"Alejandro Taboada\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/courses/e5e481ef-29b8-4685-954b-38cf16e8f758",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"courses",
+										"e5e481ef-29b8-4685-954b-38cf16e8f758"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "710"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c6-dTXxs7hKisfyWxKKHhOKHwv/ruE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 07:55:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha actualizado con éxito\",\n    \"data\": {\n        \"original\": {\n            \"idCourse\": \"e5e481ef-29b8-4685-954b-38cf16e8f758\",\n            \"title\": \"JavaScript para principiantes\",\n            \"image\": \"https://soyhorizonte.com/wp-content/uploads/2020/10/Javascript-by-SoyHorizonte.jpg\",\n            \"description\": \"Curso para todos aquellos que quieran aprender javascript\",\n            \"price\": 99.99,\n            \"school\": \"Alejandro Taboada\"\n        },\n        \"Modificado\": {\n            \"idCourse\": \"e5e481ef-29b8-4685-954b-38cf16e8f758\",\n            \"title\": \"JavaScript básico para principiantes\",\n            \"image\": \"https://soyhorizonte.com/wp-content/uploads/2020/10/Javascript-by-SoyHorizonte.jpg\",\n            \"description\": \"Curso para todos aquellos que quieran aprender javascript desde 0\",\n            \"price\": 99.99,\n            \"school\": \"Alejandro Taboada\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteCourse",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/courses/e5e481ef-29b8-4685-954b-38cf16e8f758",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"courses",
+								"e5e481ef-29b8-4685-954b-38cf16e8f758"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteCourse",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/courses/e5e481ef-29b8-4685-954b-38cf16e8f758",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"courses",
+										"e5e481ef-29b8-4685-954b-38cf16e8f758"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "380"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"17c-eqZqx0fHwFvJ9BshE5Jmdzv6Q3Q\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 07:56:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha eliminado con éxito\",\n    \"data\": {\n        \"idCourse\": \"e5e481ef-29b8-4685-954b-38cf16e8f758\",\n        \"title\": \"JavaScript básico para principiantes\",\n        \"image\": \"https://soyhorizonte.com/wp-content/uploads/2020/10/Javascript-by-SoyHorizonte.jpg\",\n        \"description\": \"Curso para todos aquellos que quieran aprender javascript desde 0\",\n        \"price\": 99.99,\n        \"school\": \"Alejandro Taboada\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "levels",
+			"item": [
+				{
+					"name": "getAllLevels",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/levels/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"levels",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAllLevels",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/levels/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"levels",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2042"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7fa-VKuybQLyIllryZLsYmbwaMot9q4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:21:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Estos son los niveles guardados actualmente\",\n    \"Data\": [\n        {\n            \"idLevel\": \"d31bb707-91cf-4a2d-b0ba-9ae5a04163d6\",\n            \"title\": \"Metrics Central\",\n            \"video\": \"http://placeimg.com/640/480\",\n            \"description\": \"Rustic seize\",\n            \"number\": 25061,\n            \"course\": \"Cambridgeshire Tunnel\"\n        },\n        {\n            \"idLevel\": \"d43c2e93-9eae-44ca-83c2-5e52a812fccc\",\n            \"title\": \"logistical Tasty\",\n            \"video\": \"http://placeimg.com/640/480\",\n            \"description\": \"Rapids Forge\",\n            \"number\": 29703,\n            \"course\": \"deposit panel\"\n        },\n        {\n            \"idLevel\": \"e124c6d0-72e7-4f17-8cc9-92d9cb1bd86e\",\n            \"title\": \"Administrator B2C Global\",\n            \"video\": \"http://placeimg.com/640/480\",\n            \"description\": \"Gibraltar Industrial\",\n            \"number\": 92376,\n            \"course\": \"Cambridgeshire Som\"\n        },\n        {\n            \"idLevel\": \"fec2a823-e7e6-4aed-a0cf-cc69798c7102\",\n            \"title\": \"networks needs-based\",\n            \"video\": \"http://placeimg.com/640/480\",\n            \"description\": \"Avon\",\n            \"number\": 82411,\n            \"course\": \"Administrator Jersey Money\"\n        },\n        {\n            \"idLevel\": \"62de4a3d-8e22-4cf8-9af7-43ff7355989f\",\n            \"title\": \"Bedfordshire maroon\",\n            \"video\": \"http://placeimg.com/640/480\",\n            \"description\": \"Chips platforms\",\n            \"number\": 11359,\n            \"course\": \"haptic technologies ROI\"\n        },\n        {\n            \"idLevel\": \"8bf0ae3a-f97d-4c50-8c4a-563a14ec94a6\",\n            \"title\": \"Awesome Account Associate\",\n            \"video\": \"http://placeimg.com/640/480\",\n            \"description\": \"Borders Bedfordshire\",\n            \"number\": 21653,\n            \"course\": \"Supervisor\"\n        },\n        {\n            \"idLevel\": \"5f5f477b-1cc4-4fdd-b1d6-f5bbbbe2a56f\",\n            \"title\": \"Steel\",\n            \"video\": \"http://placeimg.com/640/480\",\n            \"description\": \"Books area USB\",\n            \"number\": 67177,\n            \"course\": \"XML Bike Officer\"\n        },\n        {\n            \"idLevel\": \"1afd3a34-330c-4437-be0f-097df429af7f\",\n            \"title\": \"Cambridgeshire program optimal\",\n            \"video\": \"http://placeimg.com/640/480\",\n            \"description\": \"Account solutions\",\n            \"number\": 71587,\n            \"course\": \"multi-state Steel XML\"\n        },\n        {\n            \"idLevel\": \"b0e7a600-e700-49d6-81cb-4c714a13164d\",\n            \"title\": \"Granite synthesizing digital\",\n            \"video\": \"http://placeimg.com/640/480\",\n            \"description\": \"Thailand Branding\",\n            \"number\": 78467,\n            \"course\": \"bypass\"\n        },\n        {\n            \"idLevel\": \"9e92795c-3ef4-4097-bd41-6c9397973463\",\n            \"title\": \"Program Pants Benin\",\n            \"video\": \"http://placeimg.com/640/480\",\n            \"description\": \"collaborative\",\n            \"number\": 17167,\n            \"course\": \"capability Coordinator\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "createNewLevel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"title\": \"Mi primer hola mundo en c++\",\r\n            \"video\": \"https://www.youtube.com/watch?v=ld4nzao5XAc\",\r\n            \"description\": \"En este vídeo vamos a crear nuestro primer programa en c++, el 'Hola mundo :D', y además veremos como podemos dar saltos de linea en la consola\",\r\n            \"number\": 1,\r\n            \"course\": \"Programación en c++\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/levels/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"levels",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createNewLevel",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"title\": \"Mi primer hola mundo en c++\",\r\n            \"video\": \"https://www.youtube.com/watch?v=ld4nzao5XAc\",\r\n            \"description\": \"En este vídeo vamos a crear nuestro primer programa en c++, el 'Hola mundo :D', y además veremos como podemos dar saltos de linea en la consola\",\r\n            \"number\": 1,\r\n            \"course\": \"Programación en c++\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/levels/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"levels",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "407"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"197-fdF7T9u0fvI125sPJrvoFHoX8KQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:25:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha creado con éxito\",\n    \"data\": {\n        \"idLevel\": \"b3eec6ff-31a1-4030-8969-d3f2a37f4a69\",\n        \"title\": \"Mi primer hola mundo en c++\",\n        \"video\": \"https://www.youtube.com/watch?v=ld4nzao5XAc\",\n        \"description\": \"En este vídeo vamos a crear nuestro primer programa en c++, el 'Hola mundo :D', y además veremos como podemos dar saltos de linea en la consola\",\n        \"number\": 1,\n        \"course\": \"Programación en c++\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getLevelByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/levels/b3eec6ff-31a1-4030-8969-d3f2a37f4a69",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"levels",
+								"b3eec6ff-31a1-4030-8969-d3f2a37f4a69"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getLevelByID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/levels/b3eec6ff-31a1-4030-8969-d3f2a37f4a69",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"levels",
+										"b3eec6ff-31a1-4030-8969-d3f2a37f4a69"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "400"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"190-SzQJV9GDpTi+aI/NZ6EbytwzVQk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:26:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Nivel encontrado\",\n    \"data\": {\n        \"idLevel\": \"b3eec6ff-31a1-4030-8969-d3f2a37f4a69\",\n        \"title\": \"Mi primer hola mundo en c++\",\n        \"video\": \"https://www.youtube.com/watch?v=ld4nzao5XAc\",\n        \"description\": \"En este vídeo vamos a crear nuestro primer programa en c++, el 'Hola mundo :D', y además veremos como podemos dar saltos de linea en la consola\",\n        \"number\": 1,\n        \"course\": \"Programación en c++\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updateLevel",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"title\": \"Primer programa en c++\",\r\n            \"video\": \"https://www.youtube.com/watch?v=ld4nzao5XAc\",\r\n            \"description\": \"En este vídeo vamos a crear nuestro primer programa en c++, el 'Hola mundo :D', y además veremos como podemos dar saltos de linea en la consola\",\r\n            \"number\": 1,\r\n            \"course\": \"Programación en c++\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/levels/b3eec6ff-31a1-4030-8969-d3f2a37f4a69",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"levels",
+								"b3eec6ff-31a1-4030-8969-d3f2a37f4a69"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateLevel",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"title\": \"Primer programa en c++\",\r\n            \"video\": \"https://www.youtube.com/watch?v=ld4nzao5XAc\",\r\n            \"description\": \"En este vídeo vamos a crear nuestro primer programa en c++, el 'Hola mundo :D', y además veremos como podemos dar saltos de linea en la consola\",\r\n            \"number\": 1,\r\n            \"course\": \"Programación en c++\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/levels/b3eec6ff-31a1-4030-8969-d3f2a37f4a69",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"levels",
+										"b3eec6ff-31a1-4030-8969-d3f2a37f4a69"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "781"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"30d-lH/9DQ5cs5xLzgUwMKdMbvLq1E8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:28:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha actualizado con éxito\",\n    \"data\": {\n        \"original\": {\n            \"idLevel\": \"b3eec6ff-31a1-4030-8969-d3f2a37f4a69\",\n            \"title\": \"Mi primer hola mundo en c++\",\n            \"video\": \"https://www.youtube.com/watch?v=ld4nzao5XAc\",\n            \"description\": \"En este vídeo vamos a crear nuestro primer programa en c++, el 'Hola mundo :D', y además veremos como podemos dar saltos de linea en la consola\",\n            \"number\": 1,\n            \"course\": \"Programación en c++\"\n        },\n        \"Modificado\": {\n            \"idLevel\": \"b3eec6ff-31a1-4030-8969-d3f2a37f4a69\",\n            \"title\": \"Primer programa en c++\",\n            \"video\": \"https://www.youtube.com/watch?v=ld4nzao5XAc\",\n            \"description\": \"En este vídeo vamos a crear nuestro primer programa en c++, el 'Hola mundo :D', y además veremos como podemos dar saltos de linea en la consola\",\n            \"number\": 1,\n            \"course\": \"Programación en c++\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteLevel",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/levels/b3eec6ff-31a1-4030-8969-d3f2a37f4a69",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"levels",
+								"b3eec6ff-31a1-4030-8969-d3f2a37f4a69"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteLevel",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/levels/b3eec6ff-31a1-4030-8969-d3f2a37f4a69",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"levels",
+										"b3eec6ff-31a1-4030-8969-d3f2a37f4a69"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "405"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"195-TDwYdFuT+OO5bsdfj+j9NWd7vxk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:28:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha eliminado con éxito\",\n    \"data\": {\n        \"idLevel\": \"b3eec6ff-31a1-4030-8969-d3f2a37f4a69\",\n        \"title\": \"Primer programa en c++\",\n        \"video\": \"https://www.youtube.com/watch?v=ld4nzao5XAc\",\n        \"description\": \"En este vídeo vamos a crear nuestro primer programa en c++, el 'Hola mundo :D', y además veremos como podemos dar saltos de linea en la consola\",\n        \"number\": 1,\n        \"course\": \"Programación en c++\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "multimedia",
+			"item": [
+				{
+					"name": "getAllMultimedia",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/multimedia/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"multimedia",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAllMultimedia",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/multimedia/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"multimedia",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1652"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"674-zDZDPQSOTYFR+4EohzkVDQrcpx4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:29:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Estos son las multimedia encontrada\",\n    \"Data\": [\n        {\n            \"idMultimedia\": \"a6e6a15f-73a4-4dca-a03b-77efb5d496f3\",\n            \"path\": \"http://placeimg.com/640/480\",\n            \"type\": \"target\",\n            \"description\": \"multi-tasking input\",\n            \"level\": 86829\n        },\n        {\n            \"idMultimedia\": \"cd802653-bb42-48c6-bc5b-a8926c83c00e\",\n            \"path\": \"http://placeimg.com/640/480\",\n            \"type\": \"Rustic\",\n            \"description\": \"clear-thinking El portals\",\n            \"level\": 25496\n        },\n        {\n            \"idMultimedia\": \"cb1b17bd-1e85-4a74-8d09-e5d1e88405ba\",\n            \"path\": \"http://placeimg.com/640/480\",\n            \"type\": \"Assistant\",\n            \"description\": \"Future\",\n            \"level\": 69724\n        },\n        {\n            \"idMultimedia\": \"d8dbbfad-01e7-42e9-b7a9-9006f55d6bcb\",\n            \"path\": \"http://placeimg.com/640/480\",\n            \"type\": \"Total\",\n            \"description\": \"Clothing 1080p\",\n            \"level\": 67716\n        },\n        {\n            \"idMultimedia\": \"0083ee1d-7dbc-4b17-b570-4b38e33d5d81\",\n            \"path\": \"http://placeimg.com/640/480\",\n            \"type\": \"Baby\",\n            \"description\": \"port FTP policy\",\n            \"level\": 48371\n        },\n        {\n            \"idMultimedia\": \"6190c39c-e83e-4b85-9f26-ba088040105a\",\n            \"path\": \"http://placeimg.com/640/480\",\n            \"type\": \"fresh-thinking\",\n            \"description\": \"Belize Handcrafted\",\n            \"level\": 74094\n        },\n        {\n            \"idMultimedia\": \"e4b2374a-d165-4134-bed7-1a77668ea062\",\n            \"path\": \"http://placeimg.com/640/480\",\n            \"type\": \"schemas\",\n            \"description\": \"Buckinghamshire\",\n            \"level\": 74437\n        },\n        {\n            \"idMultimedia\": \"552280e3-4f32-4f20-9587-301f9dc3d9de\",\n            \"path\": \"http://placeimg.com/640/480\",\n            \"type\": \"Cotton\",\n            \"description\": \"Assimilated turquoise revolutionary\",\n            \"level\": 31359\n        },\n        {\n            \"idMultimedia\": \"8c378a72-b601-45e2-a230-a0d90c3ff952\",\n            \"path\": \"http://placeimg.com/640/480\",\n            \"type\": \"program\",\n            \"description\": \"navigate\",\n            \"level\": 8057\n        },\n        {\n            \"idMultimedia\": \"2c9c9a7d-1aff-486e-a2bc-7e0d10be311c\",\n            \"path\": \"http://placeimg.com/640/480\",\n            \"type\": \"Shoes\",\n            \"description\": \"Swedish navigate\",\n            \"level\": 19527\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "createNewMultimedia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"path\": \"http://google.com/640/480\",\r\n            \"type\": \"pdf\",\r\n            \"description\": \"Instrucciones extras para la configuración del sistema\",\r\n            \"level\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/multimedia/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"multimedia",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createNewMultimedia",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"path\": \"http://google.com/640/480\",\r\n            \"type\": \"pdf\",\r\n            \"description\": \"Instrucciones extras para la configuración del sistema\",\r\n            \"level\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/multimedia/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"multimedia",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "245"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f5-4G/TnecmiWBYMwtF2rgKuQfjtcA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:31:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha creado con éxito\",\n    \"data\": {\n        \"idMultimedia\": \"e5a32d14-ca59-4e2e-b7aa-baae75542382\",\n        \"path\": \"http://google.com/640/480\",\n        \"type\": \"pdf\",\n        \"description\": \"Instrucciones extras para la configuración del sistema\",\n        \"level\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getMultimediaByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/multimedia/e5a32d14-ca59-4e2e-b7aa-baae75542382",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"multimedia",
+								"e5a32d14-ca59-4e2e-b7aa-baae75542382"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getMultimediaByID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/multimedia/e5a32d14-ca59-4e2e-b7aa-baae75542382",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"multimedia",
+										"e5a32d14-ca59-4e2e-b7aa-baae75542382"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "238"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ee-pmt6sh39d1/UXDE0HEF8ClcEpv0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:32:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Curso encontrado\",\n    \"data\": {\n        \"idMultimedia\": \"e5a32d14-ca59-4e2e-b7aa-baae75542382\",\n        \"path\": \"http://google.com/640/480\",\n        \"type\": \"pdf\",\n        \"description\": \"Instrucciones extras para la configuración del sistema\",\n        \"level\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updateMultimedia",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"path\": \"http://google.com/archivo\",\r\n            \"type\": \"pdf\",\r\n            \"description\": \"Instrucciones extras para la configuración del sistema (no necesarias)\",\r\n            \"level\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/multimedia/e5a32d14-ca59-4e2e-b7aa-baae75542382",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"multimedia",
+								"e5a32d14-ca59-4e2e-b7aa-baae75542382"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateMultimedia",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"path\": \"http://google.com/archivo\",\r\n            \"type\": \"pdf\",\r\n            \"description\": \"Instrucciones extras para la configuración del sistema (no necesarias)\",\r\n            \"level\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/multimedia/e5a32d14-ca59-4e2e-b7aa-baae75542382",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"multimedia",
+										"e5a32d14-ca59-4e2e-b7aa-baae75542382"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "478"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1de-eZnLnAqeqPOUAzZiststIiFge/A\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:34:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha actualizado con éxito\",\n    \"data\": {\n        \"original\": {\n            \"idMultimedia\": \"e5a32d14-ca59-4e2e-b7aa-baae75542382\",\n            \"path\": \"http://google.com/640/480\",\n            \"type\": \"pdf\",\n            \"description\": \"Instrucciones extras para la configuración del sistema\",\n            \"level\": 1\n        },\n        \"Modificado\": {\n            \"idMultimedia\": \"e5a32d14-ca59-4e2e-b7aa-baae75542382\",\n            \"path\": \"http://google.com/archivo\",\n            \"type\": \"pdf\",\n            \"description\": \"Instrucciones extras para la configuración del sistema (no necesarias)\",\n            \"level\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteMultimedia",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/multimedia/e5a32d14-ca59-4e2e-b7aa-baae75542382",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"multimedia",
+								"e5a32d14-ca59-4e2e-b7aa-baae75542382"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteMultimedia",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/multimedia/e5a32d14-ca59-4e2e-b7aa-baae75542382",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"multimedia",
+										"e5a32d14-ca59-4e2e-b7aa-baae75542382"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "264"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"108-GrXLSSBSgf9vE2GA8S4BdA9lPSE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:34:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha eliminado con éxito\",\n    \"data\": {\n        \"idMultimedia\": \"e5a32d14-ca59-4e2e-b7aa-baae75542382\",\n        \"path\": \"http://google.com/archivo\",\n        \"type\": \"pdf\",\n        \"description\": \"Instrucciones extras para la configuración del sistema (no necesarias)\",\n        \"level\": 1\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "progress",
+			"item": [
+				{
+					"name": "getAllProgress",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/progress/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"progress",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAllProgress",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/progress/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"progress",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1320"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"528-yDOHlxfS6h8fMDxR2BTP1kOScCU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:35:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Estos son los avances encontrados\",\n    \"Data\": [\n        {\n            \"idProgress\": \"b4f7077b-3ab3-4f7d-a51b-e1b33f46c0d4\",\n            \"student\": \"Elijah Leffler\",\n            \"course\": \"Plastic payment\",\n            \"level\": 66256\n        },\n        {\n            \"idProgress\": \"27397ca6-ec63-45f2-a342-053a27c0f21e\",\n            \"student\": \"Jay Kuhic\",\n            \"course\": \"expedite\",\n            \"level\": 40925\n        },\n        {\n            \"idProgress\": \"8fa94d74-250a-4c72-b788-a61a5d1b4b26\",\n            \"student\": \"Rose Huels\",\n            \"course\": \"technologies Analyst Garden\",\n            \"level\": 63225\n        },\n        {\n            \"idProgress\": \"fa322f50-a046-4f6e-bb86-4c39bb7417de\",\n            \"student\": \"Lydia Schultz\",\n            \"course\": \"bus capacitor Avon\",\n            \"level\": 37049\n        },\n        {\n            \"idProgress\": \"d9cb7cb1-568e-4bab-b242-fab74c09ad44\",\n            \"student\": \"Floyd Wisoky\",\n            \"course\": \"action-items turquoise\",\n            \"level\": 71409\n        },\n        {\n            \"idProgress\": \"5ae9b32f-3046-4f88-a738-915aa5a8380e\",\n            \"student\": \"Roberto Green II\",\n            \"course\": \"invoice Mississippi bandwidth\",\n            \"level\": 23799\n        },\n        {\n            \"idProgress\": \"3e05e495-74de-40f0-9ca4-6badd317a2d1\",\n            \"student\": \"Emma Stoltenberg\",\n            \"course\": \"synthesizing real-time policy\",\n            \"level\": 55496\n        },\n        {\n            \"idProgress\": \"63aa6949-4ed7-4e92-bc59-2d084d33b75f\",\n            \"student\": \"Cody Roberts\",\n            \"course\": \"violet Markets Cheese\",\n            \"level\": 40823\n        },\n        {\n            \"idProgress\": \"59876475-c59d-49ed-a560-6ac884cecaca\",\n            \"student\": \"Terri Macejkovic\",\n            \"course\": \"Soap Cape\",\n            \"level\": 77470\n        },\n        {\n            \"idProgress\": \"3605ad16-00e5-4c50-ae83-3723f108265b\",\n            \"student\": \"Bernard Corwin\",\n            \"course\": \"Marketing\",\n            \"level\": 20797\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "createNewProgress",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"student\": \"Dykeo Alejandro\",\r\n            \"course\": \"Programación en Kotlin\",\r\n            \"level\": 12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/progress/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"progress",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createNewProgress",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"student\": \"Dykeo Alejandro\",\r\n            \"course\": \"Programación en Kotlin\",\r\n            \"level\": 12\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/progress/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"progress",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "191"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bf-ZdqFNHQ1eORQiS6Q25nxkKZTcIs\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:38:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha registrado con éxito\",\n    \"data\": {\n        \"idProgress\": \"d8aee363-e8a4-440c-ba73-476af27c20cd\",\n        \"student\": \"Dykeo Alejandro\",\n        \"course\": \"Programación en Kotlin\",\n        \"level\": 12\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getProgressByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/progress/d8aee363-e8a4-440c-ba73-476af27c20cd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"progress",
+								"d8aee363-e8a4-440c-ba73-476af27c20cd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getProgressByID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/progress/d8aee363-e8a4-440c-ba73-476af27c20cd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"progress",
+										"d8aee363-e8a4-440c-ba73-476af27c20cd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "183"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b7-Cf6RSmqogj9Ensdww46A9oFc+2A\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:39:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Progreso encontrado\",\n    \"data\": {\n        \"idProgress\": \"d8aee363-e8a4-440c-ba73-476af27c20cd\",\n        \"student\": \"Dykeo Alejandro\",\n        \"course\": \"Programación en Kotlin\",\n        \"level\": 12\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updateProgress",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"level\": 13\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/progress/d8aee363-e8a4-440c-ba73-476af27c20cd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"progress",
+								"d8aee363-e8a4-440c-ba73-476af27c20cd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateProgress",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"level\": 13\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/progress/d8aee363-e8a4-440c-ba73-476af27c20cd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"progress",
+										"d8aee363-e8a4-440c-ba73-476af27c20cd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "346"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15a-8DPvUgF9oBCSEbAnxHDwqQtIsfw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:39:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha actualizado con éxito\",\n    \"data\": {\n        \"original\": {\n            \"idProgress\": \"d8aee363-e8a4-440c-ba73-476af27c20cd\",\n            \"student\": \"Dykeo Alejandro\",\n            \"course\": \"Programación en Kotlin\",\n            \"level\": 12\n        },\n        \"Modificado\": {\n            \"idProgress\": \"d8aee363-e8a4-440c-ba73-476af27c20cd\",\n            \"student\": \"Dykeo Alejandro\",\n            \"course\": \"Programación en Kotlin\",\n            \"level\": 13\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteProgress",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/progress/d8aee363-e8a4-440c-ba73-476af27c20cd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"progress",
+								"d8aee363-e8a4-440c-ba73-476af27c20cd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteProgress",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/progress/d8aee363-e8a4-440c-ba73-476af27c20cd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"progress",
+										"d8aee363-e8a4-440c-ba73-476af27c20cd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"be-rn6zZEtX9fDDOsDeW2P6XArBQ90\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:40:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha eliminado con éxito\",\n    \"data\": {\n        \"idProgress\": \"d8aee363-e8a4-440c-ba73-476af27c20cd\",\n        \"student\": \"Dykeo Alejandro\",\n        \"course\": \"Programación en Kotlin\",\n        \"level\": 13\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "purchases",
+			"item": [
+				{
+					"name": "getAllPruchases",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/purchases/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"purchases",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAllPruchases",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/purchases/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"purchases",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1500"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5dc-n8tRIE73zdMHVov/Idjduv+HDSk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:41:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Estos son las compras encontrados\",\n    \"Data\": [\n        {\n            \"idPurchases\": \"a0a7d2f4-851d-493b-8053-a5bf09c05c19\",\n            \"type\": 1,\n            \"student\": \"Craig Berge\",\n            \"course\": \"invoice Canada invoice\",\n            \"school\": \"Nichole Gerlach\"\n        },\n        {\n            \"idPurchases\": \"1a31bfc3-5d5e-4882-89d4-838082402a95\",\n            \"type\": 0,\n            \"student\": \"Luz Kihn\",\n            \"course\": \"deliverables Planner Rial\",\n            \"school\": \"Maurice Mann\"\n        },\n        {\n            \"idPurchases\": \"c9b8a9d8-8f4f-4e58-b989-9055262a6bed\",\n            \"type\": 0,\n            \"student\": \"Gwendolyn Schmeler\",\n            \"course\": \"Serbia Loan\",\n            \"school\": \"Elsie Cronin\"\n        },\n        {\n            \"idPurchases\": \"d431dc39-4f7f-426a-baa7-88ea7422e886\",\n            \"type\": 0,\n            \"student\": \"Johnnie Renner\",\n            \"course\": \"Synergized\",\n            \"school\": \"Tommy Bartoletti\"\n        },\n        {\n            \"idPurchases\": \"8c9cecba-42fc-4d7c-8e60-41c751fdb7a3\",\n            \"type\": 2,\n            \"student\": \"Mike Flatley\",\n            \"course\": \"Swedish Unbranded Refined\",\n            \"school\": \"Caleb Marks Sr.\"\n        },\n        {\n            \"idPurchases\": \"f95a2951-b060-4635-9420-bdd20d632278\",\n            \"type\": 2,\n            \"student\": \"Norma Moore\",\n            \"course\": \"Manat benchmark Developer\",\n            \"school\": \"Duane Collins\"\n        },\n        {\n            \"idPurchases\": \"51519de6-68f0-4ecb-b85c-ba9ea4788a8a\",\n            \"type\": 2,\n            \"student\": \"Luz Ritchie\",\n            \"course\": \"metrics\",\n            \"school\": \"Mathew Champlin\"\n        },\n        {\n            \"idPurchases\": \"91428051-6c68-4c41-8d7a-f429ad871cdd\",\n            \"type\": 0,\n            \"student\": \"Roxanne Wisozk\",\n            \"course\": \"Lilangeni virtual\",\n            \"school\": \"Helen Bechtelar\"\n        },\n        {\n            \"idPurchases\": \"99ffb261-322a-4c08-b0d1-c42818207bb7\",\n            \"type\": 2,\n            \"student\": \"Bertha Deckow\",\n            \"course\": \"Legacy\",\n            \"school\": \"Ray O'Hara\"\n        },\n        {\n            \"idPurchases\": \"f07b27cf-4312-4d1e-96f9-7137bf2c4ac4\",\n            \"type\": 0,\n            \"student\": \"Johnny Gutkowski\",\n            \"course\": \"Arizona\",\n            \"school\": \"Lucas Ullrich\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "createNewPurchase",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"type\": 0,\r\n            \"student\": \"Nora Norykko\",\r\n            \"course\": \"Programación en PHP\",\r\n            \"school\": \"Alejandro Taboada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/purchases/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"purchases",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createNewPurchase",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"type\": 0,\r\n            \"student\": \"Nora Norykko\",\r\n            \"course\": \"Programación en PHP\",\r\n            \"school\": \"Alejandro Taboada\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/purchases/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"purchases",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "211"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d3-kC/NofBORcWKyd/Mvxyj8VM7okQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:45:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha comprado con éxito\",\n    \"data\": {\n        \"idPurchases\": \"5e04df3a-5d00-46e0-b6c6-afc1ea685413\",\n        \"type\": 0,\n        \"student\": \"Nora Norykko\",\n        \"course\": \"Programación en PHP\",\n        \"school\": \"Alejandro Taboada\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getPruchaseByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/purchases/5e04df3a-5d00-46e0-b6c6-afc1ea685413",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"purchases",
+								"5e04df3a-5d00-46e0-b6c6-afc1ea685413"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getPruchaseByID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/purchases/5e04df3a-5d00-46e0-b6c6-afc1ea685413",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"purchases",
+										"5e04df3a-5d00-46e0-b6c6-afc1ea685413"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cb-M1GDRXDUy3NMLoq0ng4EssSk6i0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:45:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Compra encontrada\",\n    \"data\": {\n        \"idPurchases\": \"5e04df3a-5d00-46e0-b6c6-afc1ea685413\",\n        \"type\": 0,\n        \"student\": \"Nora Norykko\",\n        \"course\": \"Programación en PHP\",\n        \"school\": \"Alejandro Taboada\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updatePurchase",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"student\": \"Nora Norykko\",\r\n            \"course\": \"Programación en PHP intermedio\",\r\n            \"school\": \"Alejandro Taboada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/purchases/5e04df3a-5d00-46e0-b6c6-afc1ea685413",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"purchases",
+								"5e04df3a-5d00-46e0-b6c6-afc1ea685413"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updatePurchase",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"student\": \"Nora Norykko\",\r\n            \"course\": \"Programación en PHP intermedio\",\r\n            \"school\": \"Alejandro Taboada\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/purchases/5e04df3a-5d00-46e0-b6c6-afc1ea685413",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"purchases",
+										"5e04df3a-5d00-46e0-b6c6-afc1ea685413"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "401"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"191-K9OlR81gBB6YJOMUjvmbG0BVeR0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:46:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha actualizado con éxito\",\n    \"data\": {\n        \"original\": {\n            \"idPurchases\": \"5e04df3a-5d00-46e0-b6c6-afc1ea685413\",\n            \"type\": 0,\n            \"student\": \"Nora Norykko\",\n            \"course\": \"Programación en PHP\",\n            \"school\": \"Alejandro Taboada\"\n        },\n        \"Modificado\": {\n            \"idPurchases\": \"5e04df3a-5d00-46e0-b6c6-afc1ea685413\",\n            \"type\": 0,\n            \"student\": \"Nora Norykko\",\n            \"course\": \"Programación en PHP intermedio\",\n            \"school\": \"Alejandro Taboada\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deletePurchase",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/purchases/5e04df3a-5d00-46e0-b6c6-afc1ea685413",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"purchases",
+								"5e04df3a-5d00-46e0-b6c6-afc1ea685413"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deletePurchase",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/purchases/5e04df3a-5d00-46e0-b6c6-afc1ea685413",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"purchases",
+										"5e04df3a-5d00-46e0-b6c6-afc1ea685413"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "223"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"df-GdrFDbprBPR++W0vJoLJxK9q/Mw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:46:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha eliminado con éxito\",\n    \"data\": {\n        \"idPurchases\": \"5e04df3a-5d00-46e0-b6c6-afc1ea685413\",\n        \"type\": 0,\n        \"student\": \"Nora Norykko\",\n        \"course\": \"Programación en PHP intermedio\",\n        \"school\": \"Alejandro Taboada\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "reviews",
+			"item": [
+				{
+					"name": "getAllReviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/reviews/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reviews",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAllReviews",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/reviews/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"reviews",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1487"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5cf-OSOzfScv4Y/aqHiAirlNgOB6Vpc\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:47:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Estos son las reseñas guardados actualmente\",\n    \"Data\": [\n        {\n            \"idReview\": \"6d206821-bd36-44d1-b96c-b8d355fb3560\",\n            \"like\": 1,\n            \"comment\": \"supply-chains Incredible iterate\",\n            \"student\": \"Terrance Lemke\",\n            \"course\": \"end-to-end Fresh BCEAO\"\n        },\n        {\n            \"idReview\": \"449018e5-30a4-43a6-8646-ce91ac6166ba\",\n            \"like\": 0,\n            \"comment\": \"Metal\",\n            \"student\": \"Ms. Oscar Harris\",\n            \"course\": \"Loan\"\n        },\n        {\n            \"idReview\": \"ef198513-3ca7-42b7-af02-e63ddb1a32eb\",\n            \"like\": 0,\n            \"comment\": \"Incredible\",\n            \"student\": \"Alice Howe\",\n            \"course\": \"exuding\"\n        },\n        {\n            \"idReview\": \"5a490478-31ff-4ff7-bbd4-bcac5e0454f0\",\n            \"like\": 1,\n            \"comment\": \"Riel Table\",\n            \"student\": \"Domingo Feil\",\n            \"course\": \"Accountability Dynamic\"\n        },\n        {\n            \"idReview\": \"f6b649b6-9da8-46b4-9ab5-22cf22153859\",\n            \"like\": 0,\n            \"comment\": \"THX cross-platform\",\n            \"student\": \"Alex Yost\",\n            \"course\": \"Oklahoma proactive\"\n        },\n        {\n            \"idReview\": \"950d92df-c30e-49c8-ad29-6ac77ae49046\",\n            \"like\": 0,\n            \"comment\": \"COM impactful Assistant\",\n            \"student\": \"Wilma Kub\",\n            \"course\": \"Cambridgeshire Practical Kansas\"\n        },\n        {\n            \"idReview\": \"e51c74b4-4d18-4232-b9b2-05049f5125a0\",\n            \"like\": 0,\n            \"comment\": \"Islands Loan withdrawal\",\n            \"student\": \"Wayne Wyman\",\n            \"course\": \"Automotive\"\n        },\n        {\n            \"idReview\": \"7548f15c-2256-4e26-bbe6-fa54f9de9605\",\n            \"like\": 0,\n            \"comment\": \"black\",\n            \"student\": \"Celia Davis\",\n            \"course\": \"Togo\"\n        },\n        {\n            \"idReview\": \"1d6b6a73-9a3c-4a24-b479-368b25c0e157\",\n            \"like\": 0,\n            \"comment\": \"THX\",\n            \"student\": \"Claire Auer\",\n            \"course\": \"magenta target JBOD\"\n        },\n        {\n            \"idReview\": \"6e7fba19-7eb8-4d7a-91d1-d888b4a2dfb6\",\n            \"like\": 0,\n            \"comment\": \"deposit\",\n            \"student\": \"Chester Bins\",\n            \"course\": \"moderator Computers deposit\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "createNewReview",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"like\": 1,\r\n            \"comment\": \"Muy buen curso, completo y bien explicado\",\r\n            \"student\": \"Ivan Santos\",\r\n            \"course\": \"Curso de mezcla y mastering\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/reviews/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reviews",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createNewReview",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"like\": 1,\r\n            \"comment\": \"Muy buen curso, completo y bien explicado\",\r\n            \"student\": \"Ivan Santos\",\r\n            \"course\": \"Curso de mezcla y mastering\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/reviews/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"reviews",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "237"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ed-FKepki89fQc4E/rzZagsWbSFLHI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:51:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha creado con éxito\",\n    \"data\": {\n        \"idReview\": \"dc3cef19-842d-4099-a339-bcbf7aac7653\",\n        \"like\": 1,\n        \"comment\": \"Muy buen curso, completo y bien explicado\",\n        \"student\": \"Ivan Santos\",\n        \"course\": \"Curso de mezcla y mastering\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getReviewByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/reviews/dc3cef19-842d-4099-a339-bcbf7aac7653",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reviews",
+								"dc3cef19-842d-4099-a339-bcbf7aac7653"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getReviewByID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/reviews/dc3cef19-842d-4099-a339-bcbf7aac7653",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"reviews",
+										"dc3cef19-842d-4099-a339-bcbf7aac7653"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "232"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e8-/hEwqmUmYOp04nKCLZP8ZGzXrwM\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:51:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Reseña encontrada\",\n    \"data\": {\n        \"idReview\": \"dc3cef19-842d-4099-a339-bcbf7aac7653\",\n        \"like\": 1,\n        \"comment\": \"Muy buen curso, completo y bien explicado\",\n        \"student\": \"Ivan Santos\",\n        \"course\": \"Curso de mezcla y mastering\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updateReview",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"like\": 1,\r\n            \"comment\": \"Muy buen curso, completo y bien explicado, recomendado 100%\",\r\n            \"student\": \"Ivan Santos\",\r\n            \"course\": \"Curso de mezcla y mastering\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/reviews/dc3cef19-842d-4099-a339-bcbf7aac7653",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reviews",
+								"dc3cef19-842d-4099-a339-bcbf7aac7653"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateReview",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"like\": 1,\r\n            \"comment\": \"Muy buen curso, completo y bien explicado, recomendado 100%\",\r\n            \"student\": \"Ivan Santos\",\r\n            \"course\": \"Curso de mezcla y mastering\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/reviews/dc3cef19-842d-4099-a339-bcbf7aac7653",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"reviews",
+										"dc3cef19-842d-4099-a339-bcbf7aac7653"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "464"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d0-CSHzCS6or6ZMPZmEP6n0sZ4Tcx4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:52:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha actualizado con éxito\",\n    \"data\": {\n        \"original\": {\n            \"idReview\": \"dc3cef19-842d-4099-a339-bcbf7aac7653\",\n            \"like\": 1,\n            \"comment\": \"Muy buen curso, completo y bien explicado\",\n            \"student\": \"Ivan Santos\",\n            \"course\": \"Curso de mezcla y mastering\"\n        },\n        \"Modificado\": {\n            \"idReview\": \"dc3cef19-842d-4099-a339-bcbf7aac7653\",\n            \"like\": 1,\n            \"comment\": \"Muy buen curso, completo y bien explicado, recomendado 100%\",\n            \"student\": \"Ivan Santos\",\n            \"course\": \"Curso de mezcla y mastering\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteReview",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/reviews/dc3cef19-842d-4099-a339-bcbf7aac7653",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reviews",
+								"dc3cef19-842d-4099-a339-bcbf7aac7653"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteReview",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/reviews/dc3cef19-842d-4099-a339-bcbf7aac7653",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"reviews",
+										"dc3cef19-842d-4099-a339-bcbf7aac7653"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "258"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"102-rCIqjg07JUXZXlE78onnCf/JGXc\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:52:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha eliminado con éxito\",\n    \"data\": {\n        \"idReview\": \"dc3cef19-842d-4099-a339-bcbf7aac7653\",\n        \"like\": 1,\n        \"comment\": \"Muy buen curso, completo y bien explicado, recomendado 100%\",\n        \"student\": \"Ivan Santos\",\n        \"course\": \"Curso de mezcla y mastering\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAllUsers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/users/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1901"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"76d-MjQgd2GYxtbL20cCsa9nKqFi8lo\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:53:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Estos son los usuarios encontrados\",\n    \"Data\": [\n        {\n            \"id\": \"226efb8a-fe18-4e40-abd2-45ce04644be7\",\n            \"name\": \"Gladys Braun\",\n            \"email\": \"Franz.Goyette@hotmail.com\",\n            \"password\": \"bgfoi9Mfy4iciYY\",\n            \"avatar\": \"http://placeimg.com/640/480\",\n            \"type\": 0\n        },\n        {\n            \"id\": \"1c135f30-1ca7-44ab-ad78-916edc6aa766\",\n            \"name\": \"Pamela Corkery\",\n            \"email\": \"Gloria.Zieme@hotmail.com\",\n            \"password\": \"FPhf7ATbwSWi29u\",\n            \"avatar\": \"http://placeimg.com/640/480\",\n            \"type\": 1\n        },\n        {\n            \"id\": \"623864a0-48f6-47b2-af71-c1b0bf205df2\",\n            \"name\": \"Miss Sidney Gottlieb\",\n            \"email\": \"Turner_Medhurst@gmail.com\",\n            \"password\": \"T57vj66yeocUgAc\",\n            \"avatar\": \"http://placeimg.com/640/480\",\n            \"type\": 0\n        },\n        {\n            \"id\": \"52f0b692-26ea-4bdc-b9aa-a8f786ea523c\",\n            \"name\": \"Kurt Kautzer Sr.\",\n            \"email\": \"Julio_Lind@hotmail.com\",\n            \"password\": \"OTteCHKaFazSXkD\",\n            \"avatar\": \"http://placeimg.com/640/480\",\n            \"type\": 1\n        },\n        {\n            \"id\": \"2a1a4715-e43f-41a5-b802-115fc4cc0d54\",\n            \"name\": \"Lorenzo Fahey\",\n            \"email\": \"Herbert.Robel@yahoo.com\",\n            \"password\": \"motbwMTJ4xO7z_m\",\n            \"avatar\": \"http://placeimg.com/640/480\",\n            \"type\": 1\n        },\n        {\n            \"id\": \"ceeb918b-e3b1-4d4d-b278-8ccb23de0df2\",\n            \"name\": \"Brenda Harris\",\n            \"email\": \"Marquise_Dickinson44@yahoo.com\",\n            \"password\": \"i60rYtqmUAMcKdV\",\n            \"avatar\": \"http://placeimg.com/640/480\",\n            \"type\": 1\n        },\n        {\n            \"id\": \"489a748e-758c-4a87-9105-89e435684894\",\n            \"name\": \"Jon Homenick\",\n            \"email\": \"Kole_Dickens60@gmail.com\",\n            \"password\": \"JmgkwubN4NVRkFf\",\n            \"avatar\": \"http://placeimg.com/640/480\",\n            \"type\": 1\n        },\n        {\n            \"id\": \"0a6f02fd-ad66-4bed-b9c7-076b58caee40\",\n            \"name\": \"Brad Jakubowski\",\n            \"email\": \"Sebastian_Adams@gmail.com\",\n            \"password\": \"B406UYObcyZZBKN\",\n            \"avatar\": \"http://placeimg.com/640/480\",\n            \"type\": 0\n        },\n        {\n            \"id\": \"6629d7f3-78b3-4e31-9084-7652ae397634\",\n            \"name\": \"Geneva Green\",\n            \"email\": \"Chaya_OConnell@hotmail.com\",\n            \"password\": \"tFwl_AeKuMWAJDm\",\n            \"avatar\": \"http://placeimg.com/640/480\",\n            \"type\": 1\n        },\n        {\n            \"id\": \"c965c797-c8b8-4710-a5fd-775302862568\",\n            \"name\": \"Jamie Crooks\",\n            \"email\": \"Randal.Gerlach@hotmail.com\",\n            \"password\": \"zcCMWCzK8ThoMiL\",\n            \"avatar\": \"http://placeimg.com/640/480\",\n            \"type\": 1\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "createNewUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"name\": \"Aitor herreda\",\r\n            \"email\": \"aitor@aitor.com\",\r\n            \"password\": \"soliloquio123\",\r\n            \"avatar\": \"https://s.mxmcdn.net/images-storage/albums4/3/2/3/8/7/5/38578323_800_800.jpg\",\r\n            \"type\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createNewUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"name\": \"Aitor herreda\",\r\n            \"email\": \"aitor@aitor.com\",\r\n            \"password\": \"soliloquio123\",\r\n            \"avatar\": \"https://s.mxmcdn.net/images-storage/albums4/3/2/3/8/7/5/38578323_800_800.jpg\",\r\n            \"type\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/users/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "282"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11a-81ZmPrMiByfS3PtVENDvoBpmt0w\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:57:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha registrado con éxito\",\n    \"data\": {\n        \"id\": \"d12df254-5003-4452-b4ef-a7f422cf548f\",\n        \"name\": \"Aitor herreda\",\n        \"email\": \"aitor@aitor.com\",\n        \"password\": \"soliloquio123\",\n        \"avatar\": \"https://s.mxmcdn.net/images-storage/albums4/3/2/3/8/7/5/38578323_800_800.jpg\",\n        \"type\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getUserByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/d12df254-5003-4452-b4ef-a7f422cf548f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"d12df254-5003-4452-b4ef-a7f422cf548f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getUserByID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/users/d12df254-5003-4452-b4ef-a7f422cf548f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"d12df254-5003-4452-b4ef-a7f422cf548f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "273"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"111-qxk4Juu1yJQp6JEbv22Md/01Zys\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:57:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Usuario encontrado\",\n    \"data\": {\n        \"id\": \"d12df254-5003-4452-b4ef-a7f422cf548f\",\n        \"name\": \"Aitor herreda\",\n        \"email\": \"aitor@aitor.com\",\n        \"password\": \"soliloquio123\",\n        \"avatar\": \"https://s.mxmcdn.net/images-storage/albums4/3/2/3/8/7/5/38578323_800_800.jpg\",\n        \"type\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"name\": \"Aitor Herreda\",\r\n            \"avatar\": \"https://s.mxmcdn.net/images-storage/albums4/3/2/3/8/7/5/38578323_800_800.jpg\",\r\n            \"type\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/d12df254-5003-4452-b4ef-a7f422cf548f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"d12df254-5003-4452-b4ef-a7f422cf548f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateUser",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"name\": \"Aitor Herreda\",\r\n            \"avatar\": \"https://s.mxmcdn.net/images-storage/albums4/3/2/3/8/7/5/38578323_800_800.jpg\",\r\n            \"type\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/users/d12df254-5003-4452-b4ef-a7f422cf548f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"d12df254-5003-4452-b4ef-a7f422cf548f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "528"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"210-9IioS6AbQvaB3Kx4XV7+D8P3cdE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:58:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha actuzaliado con éxito\",\n    \"data\": {\n        \"original\": {\n            \"id\": \"d12df254-5003-4452-b4ef-a7f422cf548f\",\n            \"name\": \"Aitor herreda\",\n            \"email\": \"aitor@aitor.com\",\n            \"password\": \"soliloquio123\",\n            \"avatar\": \"https://s.mxmcdn.net/images-storage/albums4/3/2/3/8/7/5/38578323_800_800.jpg\",\n            \"type\": 0\n        },\n        \"Modificado\": {\n            \"id\": \"d12df254-5003-4452-b4ef-a7f422cf548f\",\n            \"name\": \"Aitor Herreda\",\n            \"email\": \"aitor@aitor.com\",\n            \"password\": \"soliloquio123\",\n            \"avatar\": \"https://s.mxmcdn.net/images-storage/albums4/3/2/3/8/7/5/38578323_800_800.jpg\",\n            \"type\": 0\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/d12df254-5003-4452-b4ef-a7f422cf548f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"d12df254-5003-4452-b4ef-a7f422cf548f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteUser",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/users/d12df254-5003-4452-b4ef-a7f422cf548f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"d12df254-5003-4452-b4ef-a7f422cf548f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "281"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"119-ONEivK933WdAouvQMThXgBZHqMY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Feb 2022 18:58:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Se ha eliminado con éxito\",\n    \"data\": {\n        \"id\": \"d12df254-5003-4452-b4ef-a7f422cf548f\",\n        \"name\": \"Aitor Herreda\",\n        \"email\": \"aitor@aitor.com\",\n        \"password\": \"soliloquio123\",\n        \"avatar\": \"https://s.mxmcdn.net/images-storage/albums4/3/2/3/8/7/5/38578323_800_800.jpg\",\n        \"type\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
