@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "ec8b6b48-2b34-4037-beb5-4575a8c5fa5c",
 		"name": "Uniemy",
+		"description": "Solicitudes para la aplicación web Uniemy, proyecto para la materia Programación Web 2, odenadas en carpetas y alfabéticamente por su nombre en inglés.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -25,7 +26,8 @@
 								"categories",
 								""
 							]
-						}
+						},
+						"description": "Consigue todas las categorías guardadas actualmente"
 					},
 					"response": [
 						{
@@ -111,7 +113,8 @@
 								"categories",
 								""
 							]
-						}
+						},
+						"description": "Crea una nueva actegoría.\n\nEl parámetro que se debe de enviar a través del body es:\n\ncategory: Nombre de la categoría."
 					},
 					"response": [
 						{
@@ -197,7 +200,8 @@
 								"categories",
 								"d64a56ae-6535-4c9b-b35d-6c79c9c230e9"
 							]
-						}
+						},
+						"description": "Consigue la categoría que se encuentra con el id indicado."
 					},
 					"response": [
 						{
@@ -283,7 +287,8 @@
 								"categories",
 								"d64a56ae-6535-4c9b-b35d-6c79c9c230e9"
 							]
-						}
+						},
+						"description": "Actualiza la categoría que se encuentra con el id indicado.\n\nEl paámetro que se envía a través del body es:\n\ncategory: Nombre de la categoría."
 					},
 					"response": [
 						{
@@ -369,7 +374,8 @@
 								"categories",
 								"d64a56ae-6535-4c9b-b35d-6c79c9c230e9"
 							]
-						}
+						},
+						"description": "Elimina la categoría que se encuentra con el id indicado."
 					},
 					"response": [
 						{
@@ -429,7 +435,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": "Carpeta para todas las solicitudes de la entidad \"Categorías\""
 		},
 		{
 			"name": "certifications",
@@ -451,7 +458,8 @@
 								"certifications",
 								""
 							]
-						}
+						},
+						"description": "Consigue todas las certificaciones guardadas actualmente"
 					},
 					"response": [
 						{
@@ -537,7 +545,8 @@
 								"certifications",
 								""
 							]
-						}
+						},
+						"description": "Crea un nuevo cetificado.\n\nLos parámetros que se deben de enviar a través del body son:\n\nstudent: Nombre del usuario alumno perteneciente del certificado.  \ncourse: Nombre del curso."
 					},
 					"response": [
 						{
@@ -623,7 +632,8 @@
 								"certifications",
 								"0df7b912-2dbb-4586-8477-347bfa40adcd"
 							]
-						}
+						},
+						"description": "Consigue el certificado que se encuentra con el id indicado."
 					},
 					"response": [
 						{
@@ -709,7 +719,8 @@
 								"certifications",
 								"0df7b912-2dbb-4586-8477-347bfa40adcd"
 							]
-						}
+						},
+						"description": "Actualiza el certificado que se encuentra con el id indicado.\n\nLos parámetros que se envían a través del body son:\n\nstudent: Que es el nombre del usuario alumno.  \ncourse: Nombre del curso que se ha certificado.\n\nComo se hace con un método PATCH puede enviarse al menos 1 parámetro."
 					},
 					"response": [
 						{
@@ -795,7 +806,8 @@
 								"certifications",
 								"0df7b912-2dbb-4586-8477-347bfa40adcd"
 							]
-						}
+						},
+						"description": "Elimina el certificado que se encuentra con el id indicado."
 					},
 					"response": [
 						{
@@ -855,7 +867,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": "Carpeta para todas las solicitudes de la entidad \"Certificaciones\""
 		},
 		{
 			"name": "courses",
@@ -877,7 +890,8 @@
 								"courses",
 								""
 							]
-						}
+						},
+						"description": "Consigue todas los cursos guardados actualmente"
 					},
 					"response": [
 						{
@@ -963,7 +977,8 @@
 								"courses",
 								""
 							]
-						}
+						},
+						"description": "Crea un nuevo curso.\n\nLos parámetros que se deben de enviar a través del body son:\n\ntitle: Nombre del curso.  \nimage: Imagen del curso.  \ndescription: Descripción del curso.  \nprice: Precio del curso.  \nschool: Nombre del usuario Escuela creador del curso."
 					},
 					"response": [
 						{
@@ -1049,7 +1064,8 @@
 								"courses",
 								"e5e481ef-29b8-4685-954b-38cf16e8f758"
 							]
-						}
+						},
+						"description": "Consigue el curso que se encuentra con el id indicado."
 					},
 					"response": [
 						{
@@ -1135,7 +1151,8 @@
 								"courses",
 								"e5e481ef-29b8-4685-954b-38cf16e8f758"
 							]
-						}
+						},
+						"description": "Actualiza el curso que se encuentra con el id indicado.\n\nLos parámetros que se envían a través del body son:\n\ntitle: Que es el nombre del curso.  \nimage: Que es la imagen del curso.  \ndescription: Descripción del curso.  \nprice: Precio del curso.  \nschool: Nombre del maestro del curso.\n\nComo se hace con un método PATCH puede enviarse al menos 1 parámetro."
 					},
 					"response": [
 						{
@@ -1221,7 +1238,8 @@
 								"courses",
 								"e5e481ef-29b8-4685-954b-38cf16e8f758"
 							]
-						}
+						},
+						"description": "Elimina el curso que se encuentra con el id indicado."
 					},
 					"response": [
 						{
@@ -1281,7 +1299,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": "Carpeta para todas las solicitudes de la entidad \"Cusos\""
 		},
 		{
 			"name": "levels",
@@ -1303,7 +1322,8 @@
 								"levels",
 								""
 							]
-						}
+						},
+						"description": "Consigue todas los niveles de todos los cursos guardados actualmente"
 					},
 					"response": [
 						{
@@ -1389,7 +1409,8 @@
 								"levels",
 								""
 							]
-						}
+						},
+						"description": "Crea un nuevo nivel.\n\nLos parámetros que se deben de enviar a través del body son:\n\ntitle: Nombre del nivel.  \nvideo: Ruta del vídeo.  \ndescription: Descripción del nivel.  \nnumber: Número del nivel  \ncourse: Nombre del curso perteneciente."
 					},
 					"response": [
 						{
@@ -1475,7 +1496,8 @@
 								"levels",
 								"b3eec6ff-31a1-4030-8969-d3f2a37f4a69"
 							]
-						}
+						},
+						"description": "Consigue el nivel que se encuentra con el id indicado."
 					},
 					"response": [
 						{
@@ -1561,7 +1583,8 @@
 								"levels",
 								"b3eec6ff-31a1-4030-8969-d3f2a37f4a69"
 							]
-						}
+						},
+						"description": "Actualiza el nivel que se encuentra con el id indicado.\n\nLos parámetros que se envían a través del body son:\n\ntitle: Que es el nombre del nivel.  \nvideo: Ruta del vídeo.  \ndescription: Descripción del nivel.  \nnumber: Número del nivel.  \nCourse: Nombre del curso al que pertenece este nivel.\n\nComo se hace con un método PATCH puede enviarse al menos 1 parámetro."
 					},
 					"response": [
 						{
@@ -1647,7 +1670,8 @@
 								"levels",
 								"b3eec6ff-31a1-4030-8969-d3f2a37f4a69"
 							]
-						}
+						},
+						"description": "Elimina el nivel que se encuentra con el id indicado."
 					},
 					"response": [
 						{
@@ -1707,7 +1731,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": "Carpeta para todas las solicitudes de la entidad \"Niveles del curso\""
 		},
 		{
 			"name": "multimedia",
@@ -1729,7 +1754,8 @@
 								"multimedia",
 								""
 							]
-						}
+						},
+						"description": "Consigue todas la multimedia guardadas actualmente"
 					},
 					"response": [
 						{
@@ -1815,7 +1841,8 @@
 								"multimedia",
 								""
 							]
-						}
+						},
+						"description": "Crea una nueva multimedia.\n\nLos parámetros que se deben de enviar a través del body son:\n\npath: Ruta donde está almacenada la multimedia.  \ntype: Tipo de multimedia guardada.  \ndescription: Descripción hecha por el usuario Escuela de la respectiva multimedia.  \nlevel: Nivel del nivel que pertenece la multimedia."
 					},
 					"response": [
 						{
@@ -1901,7 +1928,8 @@
 								"multimedia",
 								"e5a32d14-ca59-4e2e-b7aa-baae75542382"
 							]
-						}
+						},
+						"description": "Consigue la multimedia que se encuentra con el id indicado."
 					},
 					"response": [
 						{
@@ -1987,7 +2015,8 @@
 								"multimedia",
 								"e5a32d14-ca59-4e2e-b7aa-baae75542382"
 							]
-						}
+						},
+						"description": "Actualiza la multimedia que se encuentra con el id indicado.\n\nLos parámetros que se envían a través del body son:\n\npath: Que es la ruta donde está almacenada la multimedia.  \ntype: Tipo de multimedia guardada.  \nDescription: Descripción que ha colocado el maestro de la multimedia.  \nlevel: Nivel al cuál pertenece la multimedia\n\nComo se hace con un método PATCH puede enviarse al menos 1 parámetro."
 					},
 					"response": [
 						{
@@ -2073,7 +2102,8 @@
 								"multimedia",
 								"e5a32d14-ca59-4e2e-b7aa-baae75542382"
 							]
-						}
+						},
+						"description": "Elimina la multimedia que se encuentra con el id indicado."
 					},
 					"response": [
 						{
@@ -2133,7 +2163,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": "Carpeta para todas las solicitudes de la entidad \"Multimedia\""
 		},
 		{
 			"name": "progress",
@@ -2155,7 +2186,8 @@
 								"progress",
 								""
 							]
-						}
+						},
+						"description": "Consigue todos los avances de todos los alumnos guardados actualmente"
 					},
 					"response": [
 						{
@@ -2241,7 +2273,8 @@
 								"progress",
 								""
 							]
-						}
+						},
+						"description": "Crea un nuevo avance.\n\nLos parámetros que se deben de enviar a través del body son:\n\nstudent: Nombre del alumno.  \ncourse: Nombre del curso.  \nlevel: Número del nivel."
 					},
 					"response": [
 						{
@@ -2327,7 +2360,8 @@
 								"progress",
 								"d8aee363-e8a4-440c-ba73-476af27c20cd"
 							]
-						}
+						},
+						"description": "Consigue el avance que se encuentra con el id indicado."
 					},
 					"response": [
 						{
@@ -2413,7 +2447,8 @@
 								"progress",
 								"d8aee363-e8a4-440c-ba73-476af27c20cd"
 							]
-						}
+						},
+						"description": "Actualiza el avance que se encuentra con el id indicado.\n\nEl parámetro que se envía a través del body es:\n\nlevel: El número del último nivel que el alumno ha visto."
 					},
 					"response": [
 						{
@@ -2499,7 +2534,8 @@
 								"progress",
 								"d8aee363-e8a4-440c-ba73-476af27c20cd"
 							]
-						}
+						},
+						"description": "Elimina el avance que se encuentra con el id indicado."
 					},
 					"response": [
 						{
@@ -2559,7 +2595,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": "Carpeta para todas las solicitudes de la entidad \"Avance\""
 		},
 		{
 			"name": "purchases",
@@ -2581,7 +2618,8 @@
 								"purchases",
 								""
 							]
-						}
+						},
+						"description": "Consigue todas las compras guardadas actualmente"
 					},
 					"response": [
 						{
@@ -2667,7 +2705,8 @@
 								"purchases",
 								""
 							]
-						}
+						},
+						"description": "Crea una nueva compra.\n\nLos parámetros que se deben de enviar a través del body son:\n\ntype: Indica el método de pago; 0 - Efectivo, 1 - Débito y 2 - Crédito.  \nstudent: Nombre del usuario estudiante.  \ncourse: Nombre del curso.  \nschool: Nombre del usuario Escuela."
 					},
 					"response": [
 						{
@@ -2753,7 +2792,8 @@
 								"purchases",
 								"5e04df3a-5d00-46e0-b6c6-afc1ea685413"
 							]
-						}
+						},
+						"description": "Consigue la compra que se encuentra con el id indicado."
 					},
 					"response": [
 						{
@@ -2839,7 +2879,8 @@
 								"purchases",
 								"5e04df3a-5d00-46e0-b6c6-afc1ea685413"
 							]
-						}
+						},
+						"description": "Actualiza la compra que se encuentra con el id indicado.\n\nLos parámetros que se envían a través del body son:\n\nstudent: Que es el nombre del estudiante que compra el curso.  \ncourse: Curso el cuál compra el estudiante.  \nschool: Maestro del curso.\n\nComo se hace con un método PATCH puede enviarse al menos 1 parámetro."
 					},
 					"response": [
 						{
@@ -2925,7 +2966,8 @@
 								"purchases",
 								"5e04df3a-5d00-46e0-b6c6-afc1ea685413"
 							]
-						}
+						},
+						"description": "Elimina la compra que se encuentra con el id indicado."
 					},
 					"response": [
 						{
@@ -2985,7 +3027,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": "Carpeta para todas las solicitudes de la entidad \"Compras\""
 		},
 		{
 			"name": "reviews",
@@ -3007,7 +3050,8 @@
 								"reviews",
 								""
 							]
-						}
+						},
+						"description": "Consigue todas las reseñas guardadas actualmente"
 					},
 					"response": [
 						{
@@ -3093,7 +3137,8 @@
 								"reviews",
 								""
 							]
-						}
+						},
+						"description": "Crea una nueva reseña.\n\nLos parámetros que se deben de enviar a través del body son:\n\nlike: Indica si le gustó al estudiante; 0 - No y 1 - Sí.  \ncomment: Reseña del usuario.  \nstudent: Nombre del alumno.  \ncourse: Nombre del curso."
 					},
 					"response": [
 						{
@@ -3179,7 +3224,8 @@
 								"reviews",
 								"dc3cef19-842d-4099-a339-bcbf7aac7653"
 							]
-						}
+						},
+						"description": "Consigue la reseña que se encuentra con el id indicado."
 					},
 					"response": [
 						{
@@ -3265,7 +3311,8 @@
 								"reviews",
 								"dc3cef19-842d-4099-a339-bcbf7aac7653"
 							]
-						}
+						},
+						"description": "Actualiza la reseña que se encuentra con el id indicado.\n\nLos parámetros que se envían a través del body son:\n\nlike: Que indica si le gustó el curso; 0 - No y 1 - Sí.  \ncomment: Que es la reseña del usuario.  \nstudent: El nombre del usuario que ha hecho la reseña.  \ncourse: Curso a la cual va dirigida la reseña.\n\nComo se hace con un método PATCH puede enviarse al menos 1 parámetro."
 					},
 					"response": [
 						{
@@ -3351,7 +3398,8 @@
 								"reviews",
 								"dc3cef19-842d-4099-a339-bcbf7aac7653"
 							]
-						}
+						},
+						"description": "Elimina la reseña que se encuentra con el id indicado."
 					},
 					"response": [
 						{
@@ -3411,7 +3459,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": "Carpeta para todas las solicitudes de la entidad \"Reseñas\""
 		},
 		{
 			"name": "users",
@@ -3433,7 +3482,8 @@
 								"users",
 								""
 							]
-						}
+						},
+						"description": "Consigue todos los usuarios guardados actualmente"
 					},
 					"response": [
 						{
@@ -3519,7 +3569,8 @@
 								"users",
 								""
 							]
-						}
+						},
+						"description": "Crea un nuevo usuario.\n\nLos parámetros que se deben de enviar a través del body son:\n\nname: Nombre del usuario.  \nemail: Correo del usuario.  \npassword: Contraseña para la cuenta.  \navatar (opcional): Imagen de perfil.  \ntype: Tipo de usuario; 0 - Alumno y 1 - Escuela(maestro)"
 					},
 					"response": [
 						{
@@ -3605,7 +3656,8 @@
 								"users",
 								"d12df254-5003-4452-b4ef-a7f422cf548f"
 							]
-						}
+						},
+						"description": "Consigue el usuario que se encuentra con el id indicado."
 					},
 					"response": [
 						{
@@ -3691,7 +3743,8 @@
 								"users",
 								"d12df254-5003-4452-b4ef-a7f422cf548f"
 							]
-						}
+						},
+						"description": "Actualiza el usuario que se encuentra con el id indicado.\n\nLos parámetros que se envían a través del body son:\n\nname: Que es el nombre del usuario.  \navatar: Que es la imagen del usuario.  \ntype: Que indica el tipo de usuario que es; 0 - alumno y 1 - escuela.\n\nComo se hace con un método PATCH puede enviarse al menos 1 parámetro."
 					},
 					"response": [
 						{
@@ -3777,7 +3830,8 @@
 								"users",
 								"d12df254-5003-4452-b4ef-a7f422cf548f"
 							]
-						}
+						},
+						"description": "Elimina el usuario que se encuentra con el id indicado."
 					},
 					"response": [
 						{
@@ -3837,7 +3891,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": "Carpeta para todas las solicitudes de la entidad \"Usuarios\""
 		}
 	]
 }
