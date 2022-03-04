@@ -1,5 +1,6 @@
 const faker = require('faker');
 const boom = require('@hapi/boom');
+const UserModel = require('./../models/users.model');
 
 class UserService {
 
@@ -41,7 +42,7 @@ class UserService {
   }
 
   findOne(id) {
-    const user = this.users.find((item) => item.id === id)
+    const user = this.users.find((item) => item.id === id);
     if (!user)
       throw boom.notFound('El usuario no fue encontrado');
     return user;
@@ -70,6 +71,74 @@ class UserService {
     var currentUser = this.users[index];
     this.users.splice(index, 1);
     return currentUser;
+  }
+
+  /////////////////////////////////////////////////////////////////////DB METHODS
+
+  async findDB(limit, filter) {
+    let usersDB = await UserModel.find(filter);
+
+    if (!usersDB || usersDB.length < 1)
+      throw boom.notFound('No hay usuarios registrados');
+
+    usersDB = limit ? usersDB.filter((item, index) => item && index < limit) : usersDB;
+    return usersDB;
+  }
+
+  async createDB(data) {
+    const model = new UserModel(data);
+    await model.save();
+    return data;
+  }
+
+  async findOneDB(id) {
+    try {
+
+      const user = await UserModel.findOne({
+        _id: id
+      });
+      if (!user)
+        throw boom.notFound('El usuario no fue encontrado');
+      return user;
+
+    } catch (error) {
+      throw boom.conflict("Error: " + error.message)
+    }
+  }
+
+  async updateDB(id, changes) {
+    let user = await UserModel.findOne({
+      _id: id
+    });
+    if (!user)
+      throw boom.notFound('El usuario no fue encontrado');
+
+    let userOrigin = {
+      name: user.name,
+      avatar: user.avatar
+    };
+
+    const { name, avatar } = changes;
+    user.name = name;
+    user.avatar = avatar;
+    user.save();
+
+    return {
+      old: userOrigin,
+      changed: user
+    }
+  }
+
+  async deleteDB(id) {
+    let user = await UserModel.findOne({
+      _id: id
+    });
+    const { deletedCount } = await UserModel.deleteOne({
+      _id: id
+    });
+    if (deletedCount <= 0)
+      throw boom.notFound('El usuario no existe');
+    return user;
   }
 
 }

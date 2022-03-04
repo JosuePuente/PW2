@@ -7,10 +7,11 @@ const { createUserDto, updateUserDto, getUserId } = require('./../dtos/users.dto
 const router = express.Router();
 
 //GET ALL USERS
-router.get('/', (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
     const { size } = req.query;
-    const users = service.find(size || 10);
+    const filter = req.body;
+    const users = await await service.findDB(size || 10, filter);
     res.json({
       'success': true,
       'message': 'Estos son los usuarios encontrados',
@@ -23,9 +24,9 @@ router.get('/', (req, res, next) => {
 });
 
 ////////////////////////////////CREATE A NEW USER
-router.post('/', validatorHandler(createUserDto, 'body'), (req, res) => {
+router.post('/', validatorHandler(createUserDto, 'body'), async (req, res) => {
   const body = req.body;
-  const user = service.create(body);
+  const user = await service.createDB(body);
   res.json({
     'success': true,
     'message': 'Se ha registrado con éxito',
@@ -34,10 +35,10 @@ router.post('/', validatorHandler(createUserDto, 'body'), (req, res) => {
 });
 
 ////////////////////////////////GET USER BY ID
-router.get('/:id', validatorHandler(getUserId, 'params'), (req, res, next) => {
+router.get('/:id', validatorHandler(getUserId, 'params'), async (req, res, next) => {
   try {
     const { id } = req.params;
-    const user = service.findOne(id);
+    const user = await service.findOneDB(id);
     res.json({
       'success': true,
       'message': 'Usuario encontrado',
@@ -49,11 +50,11 @@ router.get('/:id', validatorHandler(getUserId, 'params'), (req, res, next) => {
 });
 
 router.patch('/:id', validatorHandler(getUserId, 'params'), validatorHandler(updateUserDto, 'body'),
-  (req, res, next) => {
+  async (req, res, next) => {
     try {
       const { id } = req.params;
       const body = req.body;
-      const { old, changed } = service.update(id, body);
+      const { old, changed } = await service.updateDB(id, body);
       res.json({
         'success': true,
         'message': 'Se ha actuzaliado con éxito',
@@ -67,10 +68,10 @@ router.patch('/:id', validatorHandler(getUserId, 'params'), validatorHandler(upd
     }
   });
 
-router.delete('/:id', validatorHandler(getUserId, 'params'), (req, res, next) => {
+router.delete('/:id', validatorHandler(getUserId, 'params'), async (req, res, next) => {
   try {
     const { id } = req.params;
-    const user = service.delete(id);
+    const user = await service.deleteDB(id);
     res.json({
       'success': true,
       'message': 'Se ha eliminado con éxito',

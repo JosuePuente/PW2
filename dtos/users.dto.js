@@ -1,12 +1,11 @@
 const Joi = require('joi');
 
-const id = Joi.string().uuid();
+const id = Joi.string();//.uuid();
 const name = Joi.string().min(3).max(25);
 const email = Joi.string().email();
 const password = Joi.string().alphanum().min(5).max(25);
 const avatar = Joi.string().min(5);
 const type = Joi.number().integer().min(0).max(1);
-const status = Joi.number().integer().min(0).max(1);
 
 const createUserDto = Joi.object({
   name: name.required(),
@@ -18,9 +17,7 @@ const createUserDto = Joi.object({
 
 const updateUserDto = Joi.object({
   name: name,
-  avatar: avatar,
-  type: type,
-  status: status
+  avatar: avatar
 });
 
 const getUserId = Joi.object({
