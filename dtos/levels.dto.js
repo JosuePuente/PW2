@@ -1,6 +1,6 @@
 const Joi = require('joi');
 
-const idLevel = Joi.string().uuid();
+const idLevel = Joi.string();
 const title = Joi.string().min(5).max(50);
 const video = Joi.string().min(5);
 const description = Joi.string().min(5);

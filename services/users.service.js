@@ -79,7 +79,7 @@ class UserService {
     let usersDB = await UserModel.find(filter);
 
     if (!usersDB || usersDB.length < 1)
-      throw boom.notFound('No hay usuarios registrados');
+      throw boom.notFound('No hay registros actualmente');
 
     usersDB = limit ? usersDB.filter((item, index) => item && index < limit) : usersDB;
     return usersDB;
@@ -98,7 +98,7 @@ class UserService {
         _id: id
       });
       if (!user)
-        throw boom.notFound('El usuario no fue encontrado');
+        throw boom.notFound('No se ha encontrado coincidencia');
       return user;
 
     } catch (error) {
@@ -111,7 +111,7 @@ class UserService {
       _id: id
     });
     if (!user)
-      throw boom.notFound('El usuario no fue encontrado');
+      throw boom.notFound('No se ha encontrado coincidencia');
 
     let userOrigin = {
       name: user.name,
@@ -137,7 +137,7 @@ class UserService {
       _id: id
     });
     if (deletedCount <= 0)
-      throw boom.notFound('El usuario no existe');
+      throw boom.notFound('No se ha encontrado coincidencia');
     return user;
   }
 

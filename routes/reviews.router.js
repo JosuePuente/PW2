@@ -7,10 +7,11 @@ const { createReviewDto, updateReviewDto, getReviewId } = require('../dtos/revie
 const router = express.Router();
 
 //GET ALL REVIEWS
-router.get('/', (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
     const { size } = req.query;
-    const reviews = service.find(size || 10);
+    const filter = req.body;
+    const reviews = await service.findDB(size || 10, filter);
     res.json({
       'success': true,
       'message': 'Estos son las reseñas guardados actualmente',
@@ -23,9 +24,9 @@ router.get('/', (req, res, next) => {
 });
 
 ////////////////////////////////CREATE A NEW REVIEW
-router.post('/', validatorHandler(createReviewDto, 'body'), (req, res) => {
+router.post('/', validatorHandler(createReviewDto, 'body'), async (req, res) => {
   const body = req.body;
-  const review = service.create(body);
+  const review = await service.createDB(body);
   res.json({
     'success': true,
     'message': 'Se ha creado con éxito',
@@ -34,10 +35,10 @@ router.post('/', validatorHandler(createReviewDto, 'body'), (req, res) => {
 });
 
 ////////////////////////////////GET REVIEW BY ID
-router.get('/:idReview', validatorHandler(getReviewId, 'params'), (req, res, next) => {
+router.get('/:idReview', validatorHandler(getReviewId, 'params'), async (req, res, next) => {
   try {
     const { idReview } = req.params;
-    const review = service.findOne(idReview);
+    const review = await service.findOneDB(idReview);
     res.json({
       'success': true,
       'message': 'Reseña encontrada',
@@ -49,11 +50,11 @@ router.get('/:idReview', validatorHandler(getReviewId, 'params'), (req, res, nex
 });
 
 router.patch('/:idReview', validatorHandler(getReviewId, 'params'), validatorHandler(updateReviewDto, 'body'),
-  (req, res, next) => {
+  async (req, res, next) => {
     try {
       const { idReview } = req.params;
       const body = req.body;
-      const { old, changed } = service.update(idReview, body);
+      const { old, changed } = await service.updateDB(idReview, body);
       res.json({
         'success': true,
         'message': 'Se ha actualizado con éxito',
@@ -67,10 +68,10 @@ router.patch('/:idReview', validatorHandler(getReviewId, 'params'), validatorHan
     }
   });
 
-router.delete('/:idReview', validatorHandler(getReviewId, 'params'), (req, res, next) => {
+router.delete('/:idReview', validatorHandler(getReviewId, 'params'), async (req, res, next) => {
   try {
     const { idReview } = req.params;
-    const review = service.delete(idReview);
+    const review = await service.deleteDB(idReview);
     res.json({
       'success': true,
       'message': 'Se ha eliminado con éxito',

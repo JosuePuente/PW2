@@ -7,10 +7,11 @@ const { createPurchasesDto, updatePurchasesDto, getPurchasesId } = require('./..
 const router = express.Router();
 
 //GET ALL PURCHASES
-router.get('/', (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
     const { size } = req.query;
-    const purchases = service.find(size || 10);
+    const filter = req.body;
+    const purchases = await service.findDB(size || 10, filter);
     res.json({
       'success': true,
       'message': 'Estos son las compras encontrados',
@@ -23,9 +24,9 @@ router.get('/', (req, res, next) => {
 });
 
 ////////////////////////////////CREATE A NEW PURCHASE
-router.post('/', validatorHandler(createPurchasesDto, 'body'), (req, res) => {
+router.post('/', validatorHandler(createPurchasesDto, 'body'), async (req, res) => {
   const body = req.body;
-  const purchase = service.create(body);
+  const purchase = await service.createDB(body);
   res.json({
     'success': true,
     'message': 'Se ha comprado con éxito',
@@ -34,10 +35,10 @@ router.post('/', validatorHandler(createPurchasesDto, 'body'), (req, res) => {
 });
 
 ////////////////////////////////GET PURCHASE BY ID
-router.get('/:idPurchases', validatorHandler(getPurchasesId, 'params'), (req, res, next) => {
+router.get('/:idPurchases', validatorHandler(getPurchasesId, 'params'), async (req, res, next) => {
   try {
     const { idPurchases } = req.params;
-    const purchase = service.findOne(idPurchases);
+    const purchase = await service.findOneDB(idPurchases);
     res.json({
       'success': true,
       'message': 'Compra encontrada',
@@ -49,11 +50,11 @@ router.get('/:idPurchases', validatorHandler(getPurchasesId, 'params'), (req, re
 });
 
 router.patch('/:idPurchases', validatorHandler(getPurchasesId, 'params'), validatorHandler(updatePurchasesDto, 'body'),
-  (req, res, next) => {
+  async (req, res, next) => {
     try {
       const { idPurchases } = req.params;
       const body = req.body;
-      const { old, changed } = service.update(idPurchases, body);
+      const { old, changed } = await service.updateDB(idPurchases, body);
       res.json({
         'success': true,
         'message': 'Se ha actualizado con éxito',
@@ -67,10 +68,10 @@ router.patch('/:idPurchases', validatorHandler(getPurchasesId, 'params'), valida
     }
   });
 
-router.delete('/:idPurchases', validatorHandler(getPurchasesId, 'params'), (req, res, next) => {
+router.delete('/:idPurchases', validatorHandler(getPurchasesId, 'params'), async (req, res, next) => {
   try {
     const { idPurchases } = req.params;
-    const purchase = service.delete(idPurchases);
+    const purchase = await service.deleteDB(idPurchases);
     res.json({
       'success': true,
       'message': 'Se ha eliminado con éxito',

@@ -7,10 +7,11 @@ const { createLevelDto, updateLevelDto, getLevelId } = require('./../dtos/levels
 const router = express.Router();
 
 //GET ALL LEVELS
-router.get('/', (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
     const { size } = req.query;
-    const levels = service.find(size || 10);
+    const filter = req.body;
+    const levels = await service.findDB(size || 10, filter);
     res.json({
       'success': true,
       'message': 'Estos son los niveles guardados actualmente',
@@ -23,9 +24,9 @@ router.get('/', (req, res, next) => {
 });
 
 ////////////////////////////////CREATE A NEW LEVEL
-router.post('/', validatorHandler(createLevelDto, 'body'), (req, res) => {
+router.post('/', validatorHandler(createLevelDto, 'body'), async (req, res) => {
   const body = req.body;
-  const level = service.create(body);
+  const level = await service.createDB(body);
   res.json({
     'success': true,
     'message': 'Se ha creado con éxito',
@@ -34,10 +35,10 @@ router.post('/', validatorHandler(createLevelDto, 'body'), (req, res) => {
 });
 
 ////////////////////////////////GET LEVEL BY ID
-router.get('/:idLevel', validatorHandler(getLevelId, 'params'), (req, res, next) => {
+router.get('/:idLevel', validatorHandler(getLevelId, 'params'), async (req, res, next) => {
   try {
     const { idLevel } = req.params;
-    const level = service.findOne(idLevel);
+    const level = await service.findOneDB(idLevel);
     res.json({
       'success': true,
       'message': 'Nivel encontrado',
@@ -49,11 +50,11 @@ router.get('/:idLevel', validatorHandler(getLevelId, 'params'), (req, res, next)
 });
 
 router.patch('/:idLevel', validatorHandler(getLevelId, 'params'), validatorHandler(updateLevelDto, 'body'),
-  (req, res, next) => {
+  async (req, res, next) => {
     try {
       const { idLevel } = req.params;
       const body = req.body;
-      const { old, changed } = service.update(idLevel, body);
+      const { old, changed } = await service.updateDB(idLevel, body);
       res.json({
         'success': true,
         'message': 'Se ha actualizado con éxito',
@@ -67,10 +68,10 @@ router.patch('/:idLevel', validatorHandler(getLevelId, 'params'), validatorHandl
     }
   });
 
-router.delete('/:idLevel', validatorHandler(getLevelId, 'params'), (req, res, next) => {
+router.delete('/:idLevel', validatorHandler(getLevelId, 'params'), async (req, res, next) => {
   try {
     const { idLevel } = req.params;
-    const level = service.delete(idLevel);
+    const level = await service.deleteDB(idLevel);
     res.json({
       'success': true,
       'message': 'Se ha eliminado con éxito',

@@ -7,10 +7,11 @@ const { createCertificationDto, updateCertificationDto, getCertificationId } = r
 const router = express.Router();
 
 //GET ALL CERTIFICATIONS
-router.get('/', (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
     const { size } = req.query;
-    const certifications = service.find(size || 10);
+    const filter = req.body;
+    const certifications = await service.findDB(size || 10, filter);
     res.json({
       'success': true,
       'message': 'Estos son los certificados encontrados',
@@ -23,9 +24,9 @@ router.get('/', (req, res, next) => {
 });
 
 ////////////////////////////////CREATE A NEW CERTIFICATION
-router.post('/', validatorHandler(createCertificationDto, 'body'), (req, res) => {
+router.post('/', validatorHandler(createCertificationDto, 'body'), async (req, res) => {
   const body = req.body;
-  const certification = service.create(body);
+  const certification = await service.createDB(body);
   res.json({
     'success': true,
     'message': 'Se ha creado con éxito',
@@ -34,10 +35,10 @@ router.post('/', validatorHandler(createCertificationDto, 'body'), (req, res) =>
 });
 
 ////////////////////////////////GET CERTIFICATION BY ID
-router.get('/:idCertification', validatorHandler(getCertificationId, 'params'), (req, res, next) => {
+router.get('/:idCertification', validatorHandler(getCertificationId, 'params'), async (req, res, next) => {
   try {
     const { idCertification } = req.params;
-    const certification = service.findOne(idCertification);
+    const certification = await service.findOneDB(idCertification);
     res.json({
       'success': true,
       'message': 'Certificado encontrado',
@@ -49,11 +50,11 @@ router.get('/:idCertification', validatorHandler(getCertificationId, 'params'), 
 });
 
 router.patch('/:idCertification', validatorHandler(getCertificationId, 'params'), validatorHandler(updateCertificationDto, 'body'),
-  (req, res, next) => {
+  async (req, res, next) => {
     try {
       const { idCertification } = req.params;
       const body = req.body;
-      const { old, changed } = service.update(idCertification, body);
+      const { old, changed } = await service.updateDB(idCertification, body);
       res.json({
         'success': true,
         'message': 'Se ha actualizado con éxito',
@@ -67,10 +68,10 @@ router.patch('/:idCertification', validatorHandler(getCertificationId, 'params')
     }
   });
 
-router.delete('/:idCertification', validatorHandler(getCertificationId, 'params'), (req, res, next) => {
+router.delete('/:idCertification', validatorHandler(getCertificationId, 'params'), async (req, res, next) => {
   try {
     const { idCertification } = req.params;
-    const certification = service.delete(idCertification);
+    const certification = await service.deleteDB(idCertification);
     res.json({
       'success': true,
       'message': 'Se ha eliminado con éxito',

@@ -1,5 +1,6 @@
 const faker = require('faker');
 const boom = require('@hapi/boom');
+const CourseModel = require('./../models/courses.model');
 
 class CoursesService {
 
@@ -68,6 +69,80 @@ class CoursesService {
     var currentCourses = this.courses[index];
     this.courses.splice(index, 1);
     return currentCourses;
+  }
+
+  /////////////////////////////////////////////////////////////////////DB METHODS
+
+  async findDB(limit, filter) {
+    let coursesDB = await CourseModel.find(filter);
+
+    if (!coursesDB || coursesDB.length < 1)
+      throw boom.notFound('No hay registros actualmente');
+
+    coursesDB = limit ? coursesDB.filter((item, index) => item && index < limit) : coursesDB;
+    return coursesDB;
+  }
+
+  async createDB(data) {
+    const model = new CourseModel(data);
+    await model.save();
+    return data;
+  }
+
+  async findOneDB(id) {
+    try {
+
+      const course = await CourseModel.findOne({
+        _id: id
+      });
+      if (!course)
+        throw boom.notFound('No se ha encontrado coincidencia');
+      return course;
+
+    } catch (error) {
+      throw boom.conflict("Error: " + error.message)
+    }
+  }
+
+  async updateDB(id, changes) {
+    let course = await CourseModel.findOne({
+      _id: id
+    });
+    if (!course)
+      throw boom.notFound('No se ha encontrado coincidencia');
+
+    let courseOrigin = {
+      title: course.title,
+      image: course.image,
+      description: course.description,
+      price: course.price,
+      school: course.school
+    };
+
+    const { title, image, description, price, school } = changes;
+    course.title = title;
+    course.image = image;
+    course.description = description;
+    course.price = price;
+    course.school = school;
+    course.save();
+
+    return {
+      old: courseOrigin,
+      changed: course
+    }
+  }
+
+  async deleteDB(id) {
+    let course = await CourseModel.findOne({
+      _id: id
+    });
+    const { deletedCount } = await CourseModel.deleteOne({
+      _id: id
+    });
+    if (deletedCount <= 0)
+      throw boom.notFound('No se ha encontrado coincidencia');
+    return course;
   }
 
 }

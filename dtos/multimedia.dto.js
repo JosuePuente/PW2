@@ -1,6 +1,6 @@
 const Joi = require('joi');
 
-const idMultimedia = Joi.string().uuid();
+const idMultimedia = Joi.string();
 const path = Joi.string().min(5).max(50);
 const type = Joi.string().max(5);
 const description = Joi.string().min(5);

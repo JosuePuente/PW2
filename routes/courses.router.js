@@ -7,10 +7,11 @@ const { createCourseDto, updateCourseDto, getCourseId } = require('./../dtos/cou
 const router = express.Router();
 
 //GET ALL COURSES
-router.get('/', (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
     const { size } = req.query;
-    const courses = service.find(size || 10);
+    const filter = req.body;
+    const courses = await service.findDB(size || 10, filter);
     res.json({
       'success': true,
       'message': 'Estos son todos los cursos',
@@ -23,9 +24,9 @@ router.get('/', (req, res, next) => {
 });
 
 ////////////////////////////////CREATE A NEW COURSE
-router.post('/', validatorHandler(createCourseDto, 'body'), (req, res) => {
+router.post('/', validatorHandler(createCourseDto, 'body'), async (req, res) => {
   const body = req.body;
-  const course = service.create(body);
+  const course = await service.createDB(body);
   res.json({
     'success': true,
     'message': 'Se ha creado con éxito',
@@ -34,10 +35,10 @@ router.post('/', validatorHandler(createCourseDto, 'body'), (req, res) => {
 });
 
 ////////////////////////////////GET COURSE BY ID
-router.get('/:idCourse', validatorHandler(getCourseId, 'params'), (req, res, next) => {
+router.get('/:idCourse', validatorHandler(getCourseId, 'params'), async (req, res, next) => {
   try {
     const { idCourse } = req.params;
-    const course = service.findOne(idCourse);
+    const course = await service.findOneDB(idCourse);
     res.json({
       'success': true,
       'message': 'Curso encontrado',
@@ -49,11 +50,11 @@ router.get('/:idCourse', validatorHandler(getCourseId, 'params'), (req, res, nex
 });
 
 router.patch('/:idCourse', validatorHandler(getCourseId, 'params'), validatorHandler(updateCourseDto, 'body'),
-  (req, res, next) => {
+  async (req, res, next) => {
     try {
       const { idCourse } = req.params;
       const body = req.body;
-      const { old, changed } = service.update(idCourse, body);
+      const { old, changed } = await service.updateDB(idCourse, body);
       res.json({
         'success': true,
         'message': 'Se ha actualizado con éxito',
@@ -67,10 +68,10 @@ router.patch('/:idCourse', validatorHandler(getCourseId, 'params'), validatorHan
     }
   });
 
-router.delete('/:idCourse', validatorHandler(getCourseId, 'params'), (req, res, next) => {
+router.delete('/:idCourse', validatorHandler(getCourseId, 'params'), async (req, res, next) => {
   try {
     const { idCourse } = req.params;
-    const course = service.delete(idCourse);
+    const course = await service.deleteDB(idCourse);
     res.json({
       'success': true,
       'message': 'Se ha eliminado con éxito',

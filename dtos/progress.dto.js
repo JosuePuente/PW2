@@ -1,6 +1,6 @@
 const Joi = require('joi');
 
-const idProgress = Joi.string().uuid();
+const idProgress = Joi.string();
 const student = Joi.string().min(3).max(25);
 const course = Joi.string().min(5).max(50);
 const level = Joi.number().integer().min(1);

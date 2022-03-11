@@ -1,5 +1,6 @@
 const faker = require('faker');
 const boom = require('@hapi/boom');
+const MultimediaModel = require('./../models/multimedia.model');
 
 class MultimediaService {
 
@@ -67,6 +68,78 @@ class MultimediaService {
     var currentMultimedia = this.multimedia[index];
     this.multimedia.splice(index, 1);
     return currentMultimedia;
+  }
+
+  /////////////////////////////////////////////////////////////////////DB METHODS
+
+  async findDB(limit, filter) {
+    let multisDB = await MultimediaModel.find(filter);
+
+    if (!multisDB || multisDB.length < 1)
+      throw boom.notFound('No hay registros actualmente');
+
+    multisDB = limit ? multisDB.filter((item, index) => item && index < limit) : multisDB;
+    return multisDB;
+  }
+
+  async createDB(data) {
+    const model = new MultimediaModel(data);
+    await model.save();
+    return data;
+  }
+
+  async findOneDB(id) {
+    try {
+
+      const multi = await MultimediaModel.findOne({
+        _id: id
+      });
+      if (!multi)
+        throw boom.notFound('No se ha encontrado coincidencia');
+      return multi;
+
+    } catch (error) {
+      throw boom.conflict("Error: " + error.message)
+    }
+  }
+
+  async updateDB(id, changes) {
+    let multi = await MultimediaModel.findOne({
+      _id: id
+    });
+    if (!multi)
+      throw boom.notFound('No se ha encontrado coincidencia');
+
+    let multiOrigin = {
+      path: multi.path,
+      type: multi.type,
+      description: multi.description,
+      level: multi.level
+    };
+
+    const { path, type, description, level } = changes;
+    multi.path = path;
+    multi.type = type;
+    multi.description = description;
+    multi.level = level;
+    multi.save();
+
+    return {
+      old: multiOrigin,
+      changed: multi
+    }
+  }
+
+  async deleteDB(id) {
+    let multi = await MultimediaModel.findOne({
+      _id: id
+    });
+    const { deletedCount } = await MultimediaModel.deleteOne({
+      _id: id
+    });
+    if (deletedCount <= 0)
+      throw boom.notFound('No se ha encontrado coincidencia');
+    return multi;
   }
 
 }

@@ -11,10 +11,10 @@ router.get('/', async (req, res, next) => {
   try {
     const { size } = req.query;
     const filter = req.body;
-    const users = await await service.findDB(size || 10, filter);
+    const users = await service.findDB(size || 10, filter);
     res.json({
       'success': true,
-      'message': 'Estos son los usuarios encontrados',
+      'message': 'Estos son los registros encontrados',
       'Data': users
     });
   } catch (error) {
@@ -41,7 +41,7 @@ router.get('/:id', validatorHandler(getUserId, 'params'), async (req, res, next)
     const user = await service.findOneDB(id);
     res.json({
       'success': true,
-      'message': 'Usuario encontrado',
+      'message': 'Concidencia encontrada',
       'data': user
     });
   } catch (error) {

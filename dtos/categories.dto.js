@@ -1,6 +1,6 @@
 const Joi = require('joi');
 
-const idCategory = Joi.string().uuid();
+const idCategory = Joi.string();
 const category = Joi.string().min(3).max(25);
 
 const createCategoriesDto = Joi.object({

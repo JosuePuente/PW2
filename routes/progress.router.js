@@ -7,10 +7,11 @@ const { createProgressDto, updateProgressDto, getProgressId } = require('./../dt
 const router = express.Router();
 
 //GET ALL PROGRESS
-router.get('/', (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
     const { size } = req.query;
-    const progress = service.find(size || 10);
+    const filter = req.body;
+    const progress = await service.findDB(size || 10, filter);
     res.json({
       'success': true,
       'message': 'Estos son los avances encontrados',
@@ -23,9 +24,9 @@ router.get('/', (req, res, next) => {
 });
 
 ////////////////////////////////CREATE A NEW PROGRESS
-router.post('/', validatorHandler(createProgressDto, 'body'), (req, res) => {
+router.post('/', validatorHandler(createProgressDto, 'body'), async (req, res) => {
   const body = req.body;
-  const progress = service.create(body);
+  const progress = await service.createDB(body);
   res.json({
     'success': true,
     'message': 'Se ha registrado con éxito',
@@ -34,10 +35,10 @@ router.post('/', validatorHandler(createProgressDto, 'body'), (req, res) => {
 });
 
 ////////////////////////////////GET PROGRESS BY ID
-router.get('/:idProgress', validatorHandler(getProgressId, 'params'), (req, res, next) => {
+router.get('/:idProgress', validatorHandler(getProgressId, 'params'), async (req, res, next) => {
   try {
     const { idProgress } = req.params;
-    const progress = service.findOne(idProgress);
+    const progress = await service.findOneDB(idProgress);
     res.json({
       'success': true,
       'message': 'Progreso encontrado',
@@ -49,11 +50,11 @@ router.get('/:idProgress', validatorHandler(getProgressId, 'params'), (req, res,
 });
 
 router.patch('/:idProgress', validatorHandler(getProgressId, 'params'), validatorHandler(updateProgressDto, 'body'),
-  (req, res, next) => {
+  async (req, res, next) => {
     try {
       const { idProgress } = req.params;
       const body = req.body;
-      const { old, changed } = service.update(idProgress, body);
+      const { old, changed } = await service.updateDB(idProgress, body);
       res.json({
         'success': true,
         'message': 'Se ha actualizado con éxito',
@@ -67,10 +68,10 @@ router.patch('/:idProgress', validatorHandler(getProgressId, 'params'), validato
     }
   });
 
-router.delete('/:idProgress', validatorHandler(getProgressId, 'params'), (req, res, next) => {
+router.delete('/:idProgress', validatorHandler(getProgressId, 'params'), async (req, res, next) => {
   try {
     const { idProgress } = req.params;
-    const progress = service.delete(idProgress);
+    const progress = await service.deleteDB(idProgress);
     res.json({
       'success': true,
       'message': 'Se ha eliminado con éxito',

@@ -1,5 +1,6 @@
 const faker = require('faker');
 const boom = require('@hapi/boom');
+const ProgressModel = require('./../models/progress.model');
 
 class ProgressService {
 
@@ -14,7 +15,7 @@ class ProgressService {
       this.progress.push({
         idProgress: faker.datatype.uuid(),
         student: faker.name.findName(),
-        course: faker.random.words(),
+        progress: faker.random.words(),
         level: faker.datatype.number()
       });
 
@@ -66,6 +67,72 @@ class ProgressService {
     var currentProgress = this.progress[index];
     this.progress.splice(index, 1);
     return currentProgress;
+  }
+
+  /////////////////////////////////////////////////////////////////////DB METHODS
+
+  async findDB(limit, filter) {
+    let progresssDB = await ProgressModel.find(filter);
+
+    if (!progresssDB || progresssDB.length < 1)
+      throw boom.notFound('No hay registros actualmente');
+
+    progresssDB = limit ? progresssDB.filter((item, index) => item && index < limit) : progresssDB;
+    return progresssDB;
+  }
+
+  async createDB(data) {
+    const model = new ProgressModel(data);
+    await model.save();
+    return data;
+  }
+
+  async findOneDB(id) {
+    try {
+
+      const progress = await ProgressModel.findOne({
+        _id: id
+      });
+      if (!progress)
+        throw boom.notFound('No se ha encontrado coincidencia');
+      return progress;
+
+    } catch (error) {
+      throw boom.conflict("Error: " + error.message)
+    }
+  }
+
+  async updateDB(id, changes) {
+    let progress = await ProgressModel.findOne({
+      _id: id
+    });
+    if (!progress)
+      throw boom.notFound('No se ha encontrado coincidencia');
+
+    let progressOrigin = {
+      level: progress.level
+    };
+
+    const { level } = changes;
+    progress.level = level;
+    progress.save();
+
+    return {
+      old: progressOrigin,
+      changed: progress
+    }
+  }
+
+  async deleteDB(id) {
+    let progress = await ProgressModel.findOne({
+      _id: id
+    });
+    const { deletedCount } = await ProgressModel.deleteOne({
+      _id: id
+    });
+    if (deletedCount <= 0)
+      throw boom.notFound('No se ha encontrado coincidencia');
+    return progress;
   }
 
 }

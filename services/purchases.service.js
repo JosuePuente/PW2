@@ -1,5 +1,6 @@
 const faker = require('faker');
 const boom = require('@hapi/boom');
+const PurchaseModel = require('./../models/purchases.model');
 
 class PurchasesService {
 
@@ -17,7 +18,7 @@ class PurchasesService {
         idPurchases: faker.datatype.uuid(),
         type: tipo,
         student: faker.name.findName(),
-        course: faker.random.words(),
+        ddpurchase: faker.random.words(),
         school: faker.name.findName()
       });
     }
@@ -69,6 +70,76 @@ class PurchasesService {
     var currentPurchases = this.purchases[index];
     this.purchases.splice(index, 1);
     return currentPurchases;
+  }
+
+  /////////////////////////////////////////////////////////////////////DB METHODS
+
+  async findDB(limit, filter) {
+    let ddpurchasesDB = await PurchaseModel.find(filter);
+
+    if (!ddpurchasesDB || ddpurchasesDB.length < 1)
+      throw boom.notFound('No hay registros actualmente');
+
+    ddpurchasesDB = limit ? ddpurchasesDB.filter((item, index) => item && index < limit) : ddpurchasesDB;
+    return ddpurchasesDB;
+  }
+
+  async createDB(data) {
+    const model = new PurchaseModel(data);
+    await model.save();
+    return data;
+  }
+
+  async findOneDB(id) {
+    try {
+
+      const ddpurchase = await PurchaseModel.findOne({
+        _id: id
+      });
+      if (!ddpurchase)
+        throw boom.notFound('No se ha encontrado coincidencia');
+      return ddpurchase;
+
+    } catch (error) {
+      throw boom.conflict("Error: " + error.message)
+    }
+  }
+
+  async updateDB(id, changes) {
+    let ddpurchase = await PurchaseModel.findOne({
+      _id: id
+    });
+    if (!ddpurchase)
+      throw boom.notFound('No se ha encontrado coincidencia');
+
+    let ddpurchaseOrigin = {
+      student: ddpurchase.student,
+      course: ddpurchase.course,
+      school: ddpurchase.school
+    };
+
+    const { student, course, school } = changes;
+    ddpurchase.student = student;
+    ddpurchase.course = course;
+    ddpurchase.school = school;
+    ddpurchase.save();
+
+    return {
+      old: ddpurchaseOrigin,
+      changed: ddpurchase
+    }
+  }
+
+  async deleteDB(id) {
+    let ddpurchase = await PurchaseModel.findOne({
+      _id: id
+    });
+    const { deletedCount } = await PurchaseModel.deleteOne({
+      _id: id
+    });
+    if (deletedCount <= 0)
+      throw boom.notFound('No se ha encontrado coincidencia');
+    return ddpurchase;
   }
 
 }

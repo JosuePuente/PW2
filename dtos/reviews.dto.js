@@ -1,6 +1,6 @@
 const Joi = require('joi');
 
-const idReview = Joi.string().uuid();
+const idReview = Joi.string();
 const like = Joi.number().min(0).max(1);
 const comment = Joi.string().min(5);
 const student = Joi.string().min(3).max(50);

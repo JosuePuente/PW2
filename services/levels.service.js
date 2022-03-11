@@ -1,5 +1,6 @@
 const faker = require('faker');
 const boom = require('@hapi/boom');
+const LevelModel = require('./../models/levels.model');
 
 class LevelsService {
 
@@ -17,7 +18,7 @@ class LevelsService {
         video: faker.image.imageUrl(),
         description: faker.random.words(),
         number: faker.datatype.number(),
-        course: faker.random.words()
+        level: faker.random.words()
       });
 
   }
@@ -68,6 +69,80 @@ class LevelsService {
     var currentLevels = this.levels[index];
     this.levels.splice(index, 1);
     return currentLevels;
+  }
+
+  /////////////////////////////////////////////////////////////////////DB METHODS
+
+  async findDB(limit, filter) {
+    let levelsDB = await LevelModel.find(filter);
+
+    if (!levelsDB || levelsDB.length < 1)
+      throw boom.notFound('No hay registros actualmente');
+
+    levelsDB = limit ? levelsDB.filter((item, index) => item && index < limit) : levelsDB;
+    return levelsDB;
+  }
+
+  async createDB(data) {
+    const model = new LevelModel(data);
+    await model.save();
+    return data;
+  }
+
+  async findOneDB(id) {
+    try {
+
+      const level = await LevelModel.findOne({
+        _id: id
+      });
+      if (!level)
+        throw boom.notFound('No se ha encontrado coincidencia');
+      return level;
+
+    } catch (error) {
+      throw boom.conflict("Error: " + error.message)
+    }
+  }
+
+  async updateDB(id, changes) {
+    let level = await LevelModel.findOne({
+      _id: id
+    });
+    if (!level)
+      throw boom.notFound('No se ha encontrado coincidencia');
+
+    let levelOrigin = {
+      title: level.title,
+      video: level.video,
+      description: level.description,
+      number: level.number,
+      course: level.course
+    };
+
+    const { title, video, description, number, course } = changes;
+    level.title = title;
+    level.video = video;
+    level.description = description;
+    level.number = number;
+    level.course = course;
+    level.save();
+
+    return {
+      old: levelOrigin,
+      changed: level
+    }
+  }
+
+  async deleteDB(id) {
+    let level = await LevelModel.findOne({
+      _id: id
+    });
+    const { deletedCount } = await LevelModel.deleteOne({
+      _id: id
+    });
+    if (deletedCount <= 0)
+      throw boom.notFound('No se ha encontrado coincidencia');
+    return level;
   }
 
 }

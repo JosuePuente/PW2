@@ -7,10 +7,11 @@ const { createMultimediaDto, updateMultimediaDto, getMultimediaId } = require('.
 const router = express.Router();
 
 //GET ALL MULTIMEDIA
-router.get('/', (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
     const { size } = req.query;
-    const multimedia = service.find(size || 10);
+    const filter = req.body;
+    const multimedia = await service.findDB(size || 10, filter);
     res.json({
       'success': true,
       'message': 'Estos son las multimedia encontrada',
@@ -23,9 +24,9 @@ router.get('/', (req, res, next) => {
 });
 
 ////////////////////////////////CREATE A NEW MULTIMEDIA
-router.post('/', validatorHandler(createMultimediaDto, 'body'), (req, res) => {
+router.post('/', validatorHandler(createMultimediaDto, 'body'), async (req, res) => {
   const body = req.body;
-  const multimedia = service.create(body);
+  const multimedia = await service.createDB(body);
   res.json({
     'success': true,
     'message': 'Se ha creado con éxito',
@@ -34,10 +35,10 @@ router.post('/', validatorHandler(createMultimediaDto, 'body'), (req, res) => {
 });
 
 ////////////////////////////////GET MULTIMEDIA BY ID
-router.get('/:idMultimedia', validatorHandler(getMultimediaId, 'params'), (req, res, next) => {
+router.get('/:idMultimedia', validatorHandler(getMultimediaId, 'params'), async (req, res, next) => {
   try {
     const { idMultimedia } = req.params;
-    const multimedia = service.findOne(idMultimedia);
+    const multimedia = await service.findOneDB(idMultimedia);
     res.json({
       'success': true,
       'message': 'Curso encontrado',
@@ -49,11 +50,11 @@ router.get('/:idMultimedia', validatorHandler(getMultimediaId, 'params'), (req, 
 });
 
 router.patch('/:idMultimedia', validatorHandler(getMultimediaId, 'params'), validatorHandler(updateMultimediaDto, 'body'),
-  (req, res, next) => {
+  async (req, res, next) => {
     try {
       const { idMultimedia } = req.params;
       const body = req.body;
-      const { old, changed } = service.update(idMultimedia, body);
+      const { old, changed } = await service.updateDB(idMultimedia, body);
       res.json({
         'success': true,
         'message': 'Se ha actualizado con éxito',
@@ -67,10 +68,10 @@ router.patch('/:idMultimedia', validatorHandler(getMultimediaId, 'params'), vali
     }
   });
 
-router.delete('/:idMultimedia', validatorHandler(getMultimediaId, 'params'), (req, res, next) => {
+router.delete('/:idMultimedia', validatorHandler(getMultimediaId, 'params'), async (req, res, next) => {
   try {
     const { idMultimedia } = req.params;
-    const multimedia = service.delete(idMultimedia);
+    const multimedia = await service.deleteDB(idMultimedia);
     res.json({
       'success': true,
       'message': 'Se ha eliminado con éxito',

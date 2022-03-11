@@ -1,5 +1,6 @@
 const faker = require('faker');
 const boom = require('@hapi/boom');
+const CertificationModel = require('./../models/certifications.model');
 
 class certificationService {
 
@@ -65,6 +66,74 @@ class certificationService {
     var currentCertification = this.certifications[index];
     this.certifications.splice(index, 1);
     return currentCertification;
+  }
+
+  /////////////////////////////////////////////////////////////////////DB METHODS
+
+  async findDB(limit, filter) {
+    let certiDB = await CertificationModel.find(filter);
+
+    if (!certiDB || certiDB.length < 1)
+      throw boom.notFound('No hay registros actualmente');
+
+    certiDB = limit ? certiDB.filter((item, index) => item && index < limit) : certiDB;
+    return certiDB;
+  }
+
+  async createDB(data) {
+    const model = new CertificationModel(data);
+    await model.save();
+    return data;
+  }
+
+  async findOneDB(id) {
+    try {
+
+      const certi = await CertificationModel.findOne({
+        _id: id
+      });
+      if (!certi)
+        throw boom.notFound('No se ha encontrado coincidencia');
+      return certi;
+
+    } catch (error) {
+      throw boom.conflict("Error: " + error.message)
+    }
+  }
+
+  async updateDB(id, changes) {
+    let certi = await CertificationModel.findOne({
+      _id: id
+    });
+    if (!certi)
+      throw boom.notFound('No se ha encontrado coincidencia');
+
+    let certiOrigin = {
+      student: certi.student,
+      course: certi.course
+    };
+
+    const { student, course } = changes;
+    certi.student = student;
+    certi.course = course;
+    certi.save();
+
+    return {
+      old: certiOrigin,
+      changed: certi
+    }
+  }
+
+  async deleteDB(id) {
+    let certi = await CertificationModel.findOne({
+      _id: id
+    });
+    const { deletedCount } = await CertificationModel.deleteOne({
+      _id: id
+    });
+    if (deletedCount <= 0)
+      throw boom.notFound('No se ha encontrado coincidencia');
+    return certi;
   }
 
 }

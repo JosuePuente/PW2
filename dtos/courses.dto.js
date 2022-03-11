@@ -1,6 +1,6 @@
 const Joi = require('joi');
 
-const idCourse = Joi.string().uuid();
+const idCourse = Joi.string();
 const title = Joi.string().min(5).max(50);
 const image = Joi.string().min(5);
 const description = Joi.string().min(5);

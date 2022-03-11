@@ -7,10 +7,11 @@ const { createCategoriesDto, updateCategoriesDto, getCategoriesId } = require('.
 const router = express.Router();
 
 //GET ALL CATEGORIES
-router.get('/', (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
     const { size } = req.query;
-    const categories = service.find(size || 10);
+    const filter = req.body;
+    const categories = await service.findDB(size || 10, filter);
     res.json({
       'success': true,
       'message': 'Estos son las categorías encontradas',
@@ -23,9 +24,9 @@ router.get('/', (req, res, next) => {
 });
 
 ////////////////////////////////CREATE A NEW CATEGORY
-router.post('/', validatorHandler(createCategoriesDto, 'body'), (req, res) => {
+router.post('/', validatorHandler(createCategoriesDto, 'body'), async (req, res) => {
   const body = req.body;
-  const category = service.create(body);
+  const category = await service.createDB(body);
   res.json({
     'success': true,
     'message': 'Se ha registrado con éxito',
@@ -34,13 +35,13 @@ router.post('/', validatorHandler(createCategoriesDto, 'body'), (req, res) => {
 });
 
 ////////////////////////////////GET CATEGORY BY ID
-router.get('/:idCategory', validatorHandler(getCategoriesId, 'params'), (req, res, next) => {
+router.get('/:idCategory', validatorHandler(getCategoriesId, 'params'), async (req, res, next) => {
   try {
     const { idCategory } = req.params;
-    const category = service.findOne(idCategory);
+    const category = await service.findOneDB(idCategory);
     res.json({
       'success': true,
-      'message': 'Usuario encontrado',
+      'message': 'Categoría encontrada',
       'data': category
     });
   } catch (error) {
@@ -49,11 +50,11 @@ router.get('/:idCategory', validatorHandler(getCategoriesId, 'params'), (req, re
 });
 
 router.patch('/:idCategory', validatorHandler(getCategoriesId, 'params'), validatorHandler(updateCategoriesDto, 'body'),
-  (req, res, next) => {
+  async (req, res, next) => {
     try {
       const { idCategory } = req.params;
       const body = req.body;
-      const { old, changed } = service.update(idCategory, body);
+      const { old, changed } = await service.updateDB(idCategory, body);
       res.json({
         'success': true,
         'message': 'Se ha actualizado con éxito',
@@ -67,10 +68,10 @@ router.patch('/:idCategory', validatorHandler(getCategoriesId, 'params'), valida
     }
   });
 
-router.delete('/:idCategory', validatorHandler(getCategoriesId, 'params'), (req, res, next) => {
+router.delete('/:idCategory', validatorHandler(getCategoriesId, 'params'), async (req, res, next) => {
   try {
     const { idCategory } = req.params;
-    const category = service.delete(idCategory);
+    const category = await service.deleteDB(idCategory);
     res.json({
       'success': true,
       'message': 'Se ha eliminado con éxito',
